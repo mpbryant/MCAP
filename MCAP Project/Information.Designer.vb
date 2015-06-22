@@ -33,8 +33,8 @@ Partial Class Information
         Me.ATC1BusyToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.WalkthroughToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ViewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MinimizeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LicenseToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WindowFrameToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -75,14 +75,14 @@ Partial Class Information
         '
         Me.ModesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TrainerToolStripMenuItem, Me.FailureToolStripMenuItem, Me.WalkthroughToolStripMenuItem})
         Me.ModesToolStripMenuItem.Name = "ModesToolStripMenuItem"
-        Me.ModesToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
+        Me.ModesToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
         Me.ModesToolStripMenuItem.Text = "Modes"
         '
         'TrainerToolStripMenuItem
         '
         Me.TrainerToolStripMenuItem.CheckOnClick = True
         Me.TrainerToolStripMenuItem.Name = "TrainerToolStripMenuItem"
-        Me.TrainerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TrainerToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.TrainerToolStripMenuItem.Text = "Trainer"
         '
         'FailureToolStripMenuItem
@@ -90,19 +90,19 @@ Partial Class Information
         Me.FailureToolStripMenuItem.CheckOnClick = True
         Me.FailureToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ICUToolStripMenuItem, Me.ATC1BusyToolStripMenuItem})
         Me.FailureToolStripMenuItem.Name = "FailureToolStripMenuItem"
-        Me.FailureToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FailureToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.FailureToolStripMenuItem.Text = "Failure"
         '
         'ICUToolStripMenuItem
         '
         Me.ICUToolStripMenuItem.Name = "ICUToolStripMenuItem"
-        Me.ICUToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.ICUToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.ICUToolStripMenuItem.Text = "ICU"
         '
         'ATC1BusyToolStripMenuItem
         '
         Me.ATC1BusyToolStripMenuItem.Name = "ATC1BusyToolStripMenuItem"
-        Me.ATC1BusyToolStripMenuItem.Size = New System.Drawing.Size(131, 22)
+        Me.ATC1BusyToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
         Me.ATC1BusyToolStripMenuItem.Text = "ATC1 Busy"
         '
         'WalkthroughToolStripMenuItem
@@ -111,28 +111,27 @@ Partial Class Information
         Me.WalkthroughToolStripMenuItem.CheckOnClick = True
         Me.WalkthroughToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked
         Me.WalkthroughToolStripMenuItem.Name = "WalkthroughToolStripMenuItem"
-        Me.WalkthroughToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WalkthroughToolStripMenuItem.Size = New System.Drawing.Size(127, 22)
         Me.WalkthroughToolStripMenuItem.Text = "Walkthrough"
         '
         'ViewToolStripMenuItem
         '
-        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InformationToolStripMenuItem})
+        Me.ViewToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LicenseToolStripMenuItem, Me.WindowFrameToolStripMenuItem})
         Me.ViewToolStripMenuItem.Name = "ViewToolStripMenuItem"
-        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
+        Me.ViewToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.ViewToolStripMenuItem.Text = "View"
         '
-        'InformationToolStripMenuItem
+        'LicenseToolStripMenuItem
         '
-        Me.InformationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MinimizeToolStripMenuItem})
-        Me.InformationToolStripMenuItem.Name = "InformationToolStripMenuItem"
-        Me.InformationToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
-        Me.InformationToolStripMenuItem.Text = "Information "
+        Me.LicenseToolStripMenuItem.Name = "LicenseToolStripMenuItem"
+        Me.LicenseToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+        Me.LicenseToolStripMenuItem.Text = "License Information"
         '
-        'MinimizeToolStripMenuItem
+        'WindowFrameToolStripMenuItem
         '
-        Me.MinimizeToolStripMenuItem.Name = "MinimizeToolStripMenuItem"
-        Me.MinimizeToolStripMenuItem.Size = New System.Drawing.Size(123, 22)
-        Me.MinimizeToolStripMenuItem.Text = "Minimize"
+        Me.WindowFrameToolStripMenuItem.Name = "WindowFrameToolStripMenuItem"
+        Me.WindowFrameToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+        Me.WindowFrameToolStripMenuItem.Text = "Window Frame"
         '
         'Information
         '
@@ -165,9 +164,9 @@ Partial Class Information
     Friend WithEvents TrainerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents FailureToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ViewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents InformationToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MinimizeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ICUToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ATC1BusyToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents WalkthroughToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents LicenseToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents WindowFrameToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

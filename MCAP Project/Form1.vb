@@ -1,5 +1,8 @@
 ﻿Imports System.Threading
 
+
+
+
 Public Class MainForm
 
     'DIM statements
@@ -123,6 +126,41 @@ Public Class MainForm
 
     Dim forcedBKUPcount As Integer = 0
     Dim delayLength As Integer = 5 'used to determine how long the display takes to revert to MVOL
+
+    'For moving form that does nothave borders
+    Dim drag As Boolean
+    Dim mousex As Integer
+    Dim mousey As Integer
+
+    Dim alpha As Double = 0.5 'initial dimmer setting
+
+    Dim ld1 As New LightDimmer
+    Dim ld2 As New LightDimmer
+    Dim ld3 As New LightDimmer
+    Dim ld4 As New LightDimmer
+    Dim ld5 As New LightDimmer
+    Dim ld6 As New LightDimmer
+    Dim ld7 As New LightDimmer
+    Dim ld8 As New LightDimmer
+    Dim ld9 As New LightDimmer
+    Dim ld10 As New LightDimmer
+
+    Dim ld11 As New LightDimmer
+    Dim ld12 As New LightDimmer
+    Dim ld13 As New LightDimmer
+    Dim ld14 As New LightDimmer
+    Dim ld15 As New LightDimmer
+    Dim ld16 As New LightDimmer
+    Dim ld17 As New LightDimmer
+    Dim ld18 As New LightDimmer
+    Dim ld19 As New LightDimmer
+    Dim ld20 As New LightDimmer
+
+
+
+    Dim sideWidth As Integer = 8
+    Dim topHeight As Integer = 24
+
 
 
 
@@ -1021,6 +1059,10 @@ Public Class MainForm
 
     End Sub
     Private Sub Button13_Click(sender As Object, e As EventArgs) Handles btnUp.Click
+        If lblDisplay.Text = "DIM " Then
+            DimUp()
+            Exit Sub
+        End If
 
         If lblDisplay.Text <> "" Then   'In BKUP the display will be blank. This wraps the code to test that status
             RXTXcompare()               'see RXTXcomare sub for details on this code
@@ -1100,6 +1142,11 @@ Public Class MainForm
 
     End Sub
     Private Sub Button15_Click(sender As Object, e As EventArgs) Handles btnDown.Click
+
+        If lblDisplay.Text = "DIM " Then
+            DimDown()
+            Exit Sub
+        End If
 
         If lblDisplay.Text <> "" Then   'In BKUP the display will be blank. This wraps the code to test that status
             RXTXcompare()               'see RXTXcomare sub for details on this code
@@ -1648,11 +1695,11 @@ Public Class MainForm
 
                     MSR4count = 0   'resets the counter
                 End If
-                    MSR4state = MSR4count
-                    MSR4count = MSR4count + 1
-                    ReloadLights()
+                MSR4state = MSR4count
+                MSR4count = MSR4count + 1
+                ReloadLights()
 
-                End If
+            End If
 
 
         Else
@@ -1809,7 +1856,7 @@ Public Class MainForm
             Information.Label1.Text = info
             Information.Show()
 
-        
+
 
         End If
 
@@ -1831,7 +1878,7 @@ Public Class MainForm
             End If
 
             btnCALLlight.BackColor = Color.Transparent
-            
+
             lblDisplay.Text = MVOLval
 
         End If
@@ -2073,7 +2120,7 @@ Public Class MainForm
                 Information.Label1.Text = info
                 Information.Show()
             Else
-                
+
             End If
         End If
     End Sub
@@ -3032,6 +3079,7 @@ Public Class MainForm
         lblDisplay.Text = "PBIT OK"
 
     End Sub
+
     Private Sub MainForm_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
         formIsClosed = True
 
@@ -3060,6 +3108,9 @@ Public Class MainForm
         Welcome.Label1.Text = Info
         Welcome.ShowDialog()
         InfoWindow()
+
+        DimmerSetup()
+
 
 
 
@@ -3147,6 +3198,7 @@ Public Class MainForm
 
 
     End Sub
+
     Private Sub volumeLevels()
         If k = "MVOL" Then
             MVOLval = lblDisplay.Text
@@ -3228,6 +3280,7 @@ Public Class MainForm
 
 
     End Sub
+
     Private Sub MasterVolumeDisplay()
         lblDisplay.Text = MVOLval
     End Sub
@@ -3863,6 +3916,7 @@ Public Class MainForm
             Information.Show()
         End If
     End Sub
+
     Public Sub ReloadLights()
         If imageLoaded = "BKUP" Then
             lblDisplay.Text = ""
@@ -4214,6 +4268,7 @@ Public Class MainForm
 
         End If
     End Sub
+
     Private Sub ButtonPressWhenKnobSelectEqualsINT1()
 
         '8-31 added to test if INT is displayed before switching
@@ -5156,7 +5211,7 @@ Public Class MainForm
                     ADFState = 0
                     HFstate = 1
                 End If
-                
+
             ElseIf HFCondition = False Then
                 If ADFCondition = True Then
                     'ADFCondition = False
@@ -5167,10 +5222,10 @@ Public Class MainForm
                     ADFState = 0
                     HFstate = 0
                 End If
-                
+
             End If
 
-            
+
 
         ElseIf multiCastMode = False Then
 
@@ -5301,7 +5356,186 @@ Public Class MainForm
         btnADFlight.BackColor = Color.Transparent
     End Sub
 
-    
+    Private Sub GroupBox1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseDown, moveBtn.MouseDown
 
-    
+        drag = True
+        mousex = Windows.Forms.Cursor.Position.X - Me.Left
+        mousey = Windows.Forms.Cursor.Position.X - Me.Top
+
+    End Sub
+
+    Private Sub GroupBox1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseMove, moveBtn.MouseMove
+
+        If drag Then
+            Me.Top = Windows.Forms.Cursor.Position.Y - 310
+            Me.Left = Windows.Forms.Cursor.Position.X - mousex
+        End If
+    End Sub
+
+    Private Sub GroupBox1_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles Me.MouseUp, moveBtn.MouseUp
+
+        drag = False
+
+    End Sub
+
+
+    Private Sub closeBtn_Click(sender As Object, e As EventArgs) Handles closeBtn.Click
+        Me.Close()
+    End Sub
+
+    Private Sub DimDown()
+        If alpha <= 0.75 Then
+            alpha = alpha + 0.05
+        End If
+        SetAlphas()
+        'sets baseline times for new button click
+        timeStart = 0
+        timeEnd = 0
+    End Sub
+
+    Private Sub DimUp()
+        If alpha >= 0.05 Then
+            alpha = alpha - 0.05
+        End If
+        SetAlphas()
+        'sets baseline times for new button click
+        timeStart = 0
+        timeEnd = 0
+    End Sub
+
+    Private Sub DimmerSetup()
+        DimmerForm.Show()
+        DimmerForm.Owner = Me
+        DimmerForm.Size = New Size(248, 51)
+        DimmerForm.Location = New Point(Me.Location.X + 386, Me.Location.Y + 52)
+
+        ld1.Show()
+        ld1.Owner = Me
+        ld1.Size = New Size(5, 5)
+        ld1.Location = New Point(Me.Location.X + 307 + sideWidth, Me.Location.Y + 109 + topHeight)
+
+        ld2.Show()
+        ld2.Owner = Me
+        ld2.Size = New Size(5, 5)
+        ld2.Location = New Point(Me.Location.X + 334 + sideWidth, Me.Location.Y + 109 + topHeight)
+
+        ld3.Show()
+        ld3.Owner = Me
+        ld3.Size = New Size(5, 5)
+        ld3.Location = New Point(Me.Location.X + 379 + sideWidth, Me.Location.Y + 109 + topHeight)
+
+        ld4.Show()
+        ld4.Owner = Me
+        ld4.Size = New Size(5, 5)
+        ld4.Location = New Point(Me.Location.X + 406 + sideWidth, Me.Location.Y + 109 + topHeight)
+
+        ld5.Show()
+        ld5.Owner = Me
+        ld5.Size = New Size(5, 5)
+        ld5.Location = New Point(Me.Location.X + 599 + sideWidth, Me.Location.Y + 109 + topHeight)
+
+        ld6.Show()
+        ld6.Owner = Me
+        ld6.Size = New Size(5, 5)
+        ld6.Location = New Point(Me.Location.X + 261 + sideWidth, Me.Location.Y + 109 + topHeight)
+
+        ld7.Show()
+        ld7.Owner = Me
+        ld7.Size = New Size(5, 5)
+        ld7.Location = New Point(Me.Location.X + 234 + sideWidth, Me.Location.Y + 109 + topHeight)
+
+        ld8.Show()
+        ld8.Owner = Me
+        ld8.Size = New Size(5, 5)
+        ld8.Location = New Point(Me.Location.X + 187 + sideWidth, Me.Location.Y + 109 + topHeight)
+
+        ld9.Show()
+        ld9.Owner = Me
+        ld9.Size = New Size(5, 5)
+        ld9.Location = New Point(Me.Location.X + 160 + sideWidth, Me.Location.Y + 109 + topHeight)
+
+        ld10.Show()
+        ld10.Owner = Me
+        ld10.Size = New Size(5, 5)
+        ld10.Location = New Point(Me.Location.X + 112 + sideWidth, Me.Location.Y + 109 + topHeight)
+
+        ld11.Show()
+        ld11.Owner = Me
+        ld11.Size = New Size(5, 5)
+        ld11.Location = New Point(Me.Location.X + 85 + sideWidth, Me.Location.Y + 109 + topHeight)
+        ld12.Show()
+        ld12.Owner = Me
+        ld12.Size = New Size(5, 5)
+        ld12.Location = New Point(Me.Location.X + 85 + sideWidth, Me.Location.Y + 40 + topHeight)
+        ld13.Show()
+        ld13.Owner = Me
+        ld13.Size = New Size(5, 5)
+        ld13.Location = New Point(Me.Location.X + 112 + sideWidth, Me.Location.Y + 40 + topHeight)
+        ld14.Show()
+        ld14.Owner = Me
+        ld14.Size = New Size(5, 5)
+        ld14.Location = New Point(Me.Location.X + 160 + sideWidth, Me.Location.Y + 40 + topHeight)
+        ld15.Show()
+        ld15.Owner = Me
+        ld15.Size = New Size(5, 5)
+        ld15.Location = New Point(Me.Location.X + 187 + sideWidth, Me.Location.Y + 40 + topHeight)
+        ld16.Show()
+        ld16.Owner = Me
+        ld16.Size = New Size(5, 5)
+        ld16.Location = New Point(Me.Location.X + 234 + sideWidth, Me.Location.Y + 40 + topHeight)
+        ld17.Show()
+        ld17.Owner = Me
+        ld17.Size = New Size(5, 5)
+        ld17.Location = New Point(Me.Location.X + 261 + sideWidth, Me.Location.Y + 40 + topHeight)
+        ld18.Show()
+        ld18.Owner = Me
+        ld18.Size = New Size(5, 5)
+        ld18.Location = New Point(Me.Location.X + 307 + sideWidth, Me.Location.Y + 40 + topHeight)
+        ld19.Show()
+        ld19.Owner = Me
+        ld19.Size = New Size(5, 5)
+        ld19.Location = New Point(Me.Location.X + 334 + sideWidth, Me.Location.Y + 40 + topHeight)
+        ld20.Show()
+        ld20.Owner = Me
+        ld20.Size = New Size(5, 5)
+        ld20.Location = New Point(Me.Location.X + 85 + sideWidth, Me.Location.Y + 179 + topHeight)
+
+
+
+
+
+
+
+    End Sub
+
+    Private Sub SetAlphas()
+        DimmerForm.Opacity = alpha
+        ld1.Opacity = alpha
+        ld2.Opacity = alpha
+        ld3.Opacity = alpha
+        ld4.Opacity = alpha
+        ld5.Opacity = alpha
+        ld6.Opacity = alpha
+        ld7.Opacity = alpha
+        ld8.Opacity = alpha
+        ld9.Opacity = alpha
+        ld10.Opacity = alpha
+
+        ld11.Opacity = alpha
+        ld12.Opacity = alpha
+        ld13.Opacity = alpha
+        ld14.Opacity = alpha
+        ld15.Opacity = alpha
+        ld16.Opacity = alpha
+        ld17.Opacity = alpha
+        ld18.Opacity = alpha
+        ld19.Opacity = alpha
+        ld20.Opacity = alpha
+    End Sub
+
+
+
+    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
+
+    End Sub
 End Class

@@ -23,36 +23,43 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.ICUfailLight = New System.Windows.Forms.Label()
-        Me.btnCDLposition = New System.Windows.Forms.Button()
-        Me.btnMSR4position = New System.Windows.Forms.Button()
-        Me.btnMSR3position = New System.Windows.Forms.Button()
-        Me.btnMSR2position = New System.Windows.Forms.Button()
-        Me.btnMSR1position = New System.Windows.Forms.Button()
-        Me.btnVU2position = New System.Windows.Forms.Button()
-        Me.btnVU1position = New System.Windows.Forms.Button()
-        Me.btnHFposition = New System.Windows.Forms.Button()
-        Me.btnATC2position = New System.Windows.Forms.Button()
-        Me.btnATC1position = New System.Windows.Forms.Button()
-        Me.btnINT2position = New System.Windows.Forms.Button()
-        Me.btnINT1position = New System.Windows.Forms.Button()
-        Me.btnBKUPposition = New System.Windows.Forms.Button()
-        Me.lblDisplay = New System.Windows.Forms.Label()
-        Me.CDLtx = New System.Windows.Forms.Button()
-        Me.MSR4tx = New System.Windows.Forms.Button()
-        Me.MSR3tx = New System.Windows.Forms.Button()
-        Me.MSR2tx = New System.Windows.Forms.Button()
-        Me.MSR1tx = New System.Windows.Forms.Button()
-        Me.VU2tx = New System.Windows.Forms.Button()
-        Me.VU1tx = New System.Windows.Forms.Button()
-        Me.HFtx = New System.Windows.Forms.Button()
-        Me.ATC2tx = New System.Windows.Forms.Button()
-        Me.ATC1tx = New System.Windows.Forms.Button()
-        Me.INT2tx = New System.Windows.Forms.Button()
-        Me.INT1tx = New System.Windows.Forms.Button()
-        Me.BKUPtx = New System.Windows.Forms.Button()
+        Me.btnMODE = New System.Windows.Forms.Button()
+        Me.btnSEL = New System.Windows.Forms.Button()
+        Me.btnCALL = New System.Windows.Forms.Button()
+        Me.btnMODEleftLight = New System.Windows.Forms.Button()
+        Me.btnMODErightLight = New System.Windows.Forms.Button()
         Me.btnCALLlight = New System.Windows.Forms.Button()
+        Me.BKUPtx = New System.Windows.Forms.Button()
+        Me.INT1tx = New System.Windows.Forms.Button()
+        Me.INT2tx = New System.Windows.Forms.Button()
+        Me.ATC1tx = New System.Windows.Forms.Button()
+        Me.ATC2tx = New System.Windows.Forms.Button()
+        Me.HFtx = New System.Windows.Forms.Button()
+        Me.VU1tx = New System.Windows.Forms.Button()
+        Me.VU2tx = New System.Windows.Forms.Button()
+        Me.MSR1tx = New System.Windows.Forms.Button()
+        Me.MSR2tx = New System.Windows.Forms.Button()
+        Me.MSR3tx = New System.Windows.Forms.Button()
+        Me.MSR4tx = New System.Windows.Forms.Button()
+        Me.CDLtx = New System.Windows.Forms.Button()
+        Me.lblDisplay = New System.Windows.Forms.Label()
+        Me.btnBKUPposition = New System.Windows.Forms.Button()
+        Me.btnINT1position = New System.Windows.Forms.Button()
+        Me.btnINT2position = New System.Windows.Forms.Button()
+        Me.btnATC1position = New System.Windows.Forms.Button()
+        Me.btnATC2position = New System.Windows.Forms.Button()
+        Me.btnHFposition = New System.Windows.Forms.Button()
+        Me.btnVU1position = New System.Windows.Forms.Button()
+        Me.btnVU2position = New System.Windows.Forms.Button()
+        Me.btnMSR1position = New System.Windows.Forms.Button()
+        Me.btnMSR2position = New System.Windows.Forms.Button()
+        Me.btnMSR3position = New System.Windows.Forms.Button()
+        Me.btnMSR4position = New System.Windows.Forms.Button()
+        Me.btnCDLposition = New System.Windows.Forms.Button()
+        Me.ICUfailLight = New System.Windows.Forms.Label()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.closeBtn = New System.Windows.Forms.Button()
+        Me.moveBtn = New System.Windows.Forms.Button()
         Me.btnAUXrightLight = New System.Windows.Forms.Button()
         Me.btnAUXleftLight = New System.Windows.Forms.Button()
         Me.btnMSR4rightLight = New System.Windows.Forms.Button()
@@ -73,8 +80,6 @@ Partial Class MainForm
         Me.btnMBlight = New System.Windows.Forms.Button()
         Me.btnVOR2light = New System.Windows.Forms.Button()
         Me.btnVOR1light = New System.Windows.Forms.Button()
-        Me.btnMODErightLight = New System.Windows.Forms.Button()
-        Me.btnMODEleftLight = New System.Windows.Forms.Button()
         Me.btnVU2Slight = New System.Windows.Forms.Button()
         Me.btnVU2light = New System.Windows.Forms.Button()
         Me.btnVU1Slight = New System.Windows.Forms.Button()
@@ -89,9 +94,6 @@ Partial Class MainForm
         Me.btnAUX = New System.Windows.Forms.Button()
         Me.btnUp = New System.Windows.Forms.Button()
         Me.btnCDL = New System.Windows.Forms.Button()
-        Me.btnCALL = New System.Windows.Forms.Button()
-        Me.btnSEL = New System.Windows.Forms.Button()
-        Me.btnMODE = New System.Windows.Forms.Button()
         Me.btnInt12 = New System.Windows.Forms.Button()
         Me.btnDME = New System.Windows.Forms.Button()
         Me.btnMKRTCN = New System.Windows.Forms.Button()
@@ -107,11 +109,506 @@ Partial Class MainForm
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
+        'btnMODE
+        '
+        Me.btnMODE.BackColor = System.Drawing.Color.Transparent
+        Me.btnMODE.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnMODE.FlatAppearance.BorderSize = 0
+        Me.btnMODE.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnMODE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnMODE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMODE.Location = New System.Drawing.Point(375, 118)
+        Me.btnMODE.Name = "btnMODE"
+        Me.btnMODE.Size = New System.Drawing.Size(40, 42)
+        Me.btnMODE.TabIndex = 10
+        Me.btnMODE.TabStop = False
+        Me.btnMODE.UseVisualStyleBackColor = False
+        '
+        'btnSEL
+        '
+        Me.btnSEL.BackColor = System.Drawing.Color.Transparent
+        Me.btnSEL.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnSEL.FlatAppearance.BorderSize = 0
+        Me.btnSEL.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnSEL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnSEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSEL.Location = New System.Drawing.Point(449, 118)
+        Me.btnSEL.Name = "btnSEL"
+        Me.btnSEL.Size = New System.Drawing.Size(40, 42)
+        Me.btnSEL.TabIndex = 11
+        Me.btnSEL.TabStop = False
+        Me.btnSEL.UseVisualStyleBackColor = False
+        '
+        'btnCALL
+        '
+        Me.btnCALL.BackColor = System.Drawing.Color.Transparent
+        Me.btnCALL.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnCALL.FlatAppearance.BorderSize = 0
+        Me.btnCALL.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnCALL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnCALL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCALL.Location = New System.Drawing.Point(582, 118)
+        Me.btnCALL.Name = "btnCALL"
+        Me.btnCALL.Size = New System.Drawing.Size(40, 42)
+        Me.btnCALL.TabIndex = 12
+        Me.btnCALL.TabStop = False
+        Me.btnCALL.UseVisualStyleBackColor = False
+        '
+        'btnMODEleftLight
+        '
+        Me.btnMODEleftLight.BackColor = System.Drawing.Color.Transparent
+        Me.btnMODEleftLight.FlatAppearance.BorderColor = System.Drawing.SystemColors.InfoText
+        Me.btnMODEleftLight.FlatAppearance.BorderSize = 0
+        Me.btnMODEleftLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnMODEleftLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMODEleftLight.ForeColor = System.Drawing.Color.Transparent
+        Me.btnMODEleftLight.Location = New System.Drawing.Point(379, 109)
+        Me.btnMODEleftLight.Name = "btnMODEleftLight"
+        Me.btnMODEleftLight.Size = New System.Drawing.Size(5, 5)
+        Me.btnMODEleftLight.TabIndex = 27
+        Me.btnMODEleftLight.TabStop = False
+        Me.btnMODEleftLight.UseVisualStyleBackColor = False
+        '
+        'btnMODErightLight
+        '
+        Me.btnMODErightLight.BackColor = System.Drawing.Color.Transparent
+        Me.btnMODErightLight.FlatAppearance.BorderColor = System.Drawing.SystemColors.InfoText
+        Me.btnMODErightLight.FlatAppearance.BorderSize = 0
+        Me.btnMODErightLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnMODErightLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMODErightLight.ForeColor = System.Drawing.Color.Transparent
+        Me.btnMODErightLight.Location = New System.Drawing.Point(406, 109)
+        Me.btnMODErightLight.Name = "btnMODErightLight"
+        Me.btnMODErightLight.Size = New System.Drawing.Size(5, 5)
+        Me.btnMODErightLight.TabIndex = 28
+        Me.btnMODErightLight.TabStop = False
+        Me.btnMODErightLight.UseVisualStyleBackColor = False
+        '
+        'btnCALLlight
+        '
+        Me.btnCALLlight.BackColor = System.Drawing.Color.Transparent
+        Me.btnCALLlight.FlatAppearance.BorderColor = System.Drawing.SystemColors.InfoText
+        Me.btnCALLlight.FlatAppearance.BorderSize = 0
+        Me.btnCALLlight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnCALLlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCALLlight.ForeColor = System.Drawing.Color.Transparent
+        Me.btnCALLlight.Location = New System.Drawing.Point(599, 109)
+        Me.btnCALLlight.Name = "btnCALLlight"
+        Me.btnCALLlight.Size = New System.Drawing.Size(5, 5)
+        Me.btnCALLlight.TabIndex = 55
+        Me.btnCALLlight.TabStop = False
+        Me.btnCALLlight.UseVisualStyleBackColor = False
+        '
+        'BKUPtx
+        '
+        Me.BKUPtx.BackColor = System.Drawing.Color.Transparent
+        Me.BKUPtx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.BKUPtx.FlatAppearance.BorderSize = 0
+        Me.BKUPtx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.BKUPtx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BKUPtx.ForeColor = System.Drawing.Color.Transparent
+        Me.BKUPtx.Location = New System.Drawing.Point(474, 312)
+        Me.BKUPtx.Name = "BKUPtx"
+        Me.BKUPtx.Size = New System.Drawing.Size(5, 5)
+        Me.BKUPtx.TabIndex = 56
+        Me.BKUPtx.UseVisualStyleBackColor = False
+        '
+        'INT1tx
+        '
+        Me.INT1tx.BackColor = System.Drawing.Color.GreenYellow
+        Me.INT1tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.INT1tx.FlatAppearance.BorderSize = 0
+        Me.INT1tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.INT1tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.INT1tx.ForeColor = System.Drawing.Color.Transparent
+        Me.INT1tx.Location = New System.Drawing.Point(459, 292)
+        Me.INT1tx.Name = "INT1tx"
+        Me.INT1tx.Size = New System.Drawing.Size(5, 5)
+        Me.INT1tx.TabIndex = 57
+        Me.INT1tx.UseVisualStyleBackColor = False
+        '
+        'INT2tx
+        '
+        Me.INT2tx.BackColor = System.Drawing.Color.Transparent
+        Me.INT2tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.INT2tx.FlatAppearance.BorderSize = 0
+        Me.INT2tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.INT2tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.INT2tx.ForeColor = System.Drawing.Color.Transparent
+        Me.INT2tx.Location = New System.Drawing.Point(454, 268)
+        Me.INT2tx.Name = "INT2tx"
+        Me.INT2tx.Size = New System.Drawing.Size(5, 5)
+        Me.INT2tx.TabIndex = 58
+        Me.INT2tx.UseVisualStyleBackColor = False
+        '
+        'ATC1tx
+        '
+        Me.ATC1tx.BackColor = System.Drawing.Color.Transparent
+        Me.ATC1tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ATC1tx.FlatAppearance.BorderSize = 0
+        Me.ATC1tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.ATC1tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ATC1tx.ForeColor = System.Drawing.Color.Transparent
+        Me.ATC1tx.Location = New System.Drawing.Point(459, 243)
+        Me.ATC1tx.Name = "ATC1tx"
+        Me.ATC1tx.Size = New System.Drawing.Size(5, 5)
+        Me.ATC1tx.TabIndex = 59
+        Me.ATC1tx.UseVisualStyleBackColor = False
+        '
+        'ATC2tx
+        '
+        Me.ATC2tx.BackColor = System.Drawing.Color.Transparent
+        Me.ATC2tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.ATC2tx.FlatAppearance.BorderSize = 0
+        Me.ATC2tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.ATC2tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ATC2tx.ForeColor = System.Drawing.Color.Transparent
+        Me.ATC2tx.Location = New System.Drawing.Point(473, 223)
+        Me.ATC2tx.Name = "ATC2tx"
+        Me.ATC2tx.Size = New System.Drawing.Size(5, 5)
+        Me.ATC2tx.TabIndex = 60
+        Me.ATC2tx.UseVisualStyleBackColor = False
+        '
+        'HFtx
+        '
+        Me.HFtx.BackColor = System.Drawing.Color.Transparent
+        Me.HFtx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.HFtx.FlatAppearance.BorderSize = 0
+        Me.HFtx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.HFtx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.HFtx.ForeColor = System.Drawing.Color.Transparent
+        Me.HFtx.Location = New System.Drawing.Point(492, 210)
+        Me.HFtx.Name = "HFtx"
+        Me.HFtx.Size = New System.Drawing.Size(5, 5)
+        Me.HFtx.TabIndex = 61
+        Me.HFtx.UseVisualStyleBackColor = False
+        '
+        'VU1tx
+        '
+        Me.VU1tx.BackColor = System.Drawing.Color.Transparent
+        Me.VU1tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.VU1tx.FlatAppearance.BorderSize = 0
+        Me.VU1tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.VU1tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.VU1tx.ForeColor = System.Drawing.Color.Transparent
+        Me.VU1tx.Location = New System.Drawing.Point(517, 204)
+        Me.VU1tx.Name = "VU1tx"
+        Me.VU1tx.Size = New System.Drawing.Size(5, 5)
+        Me.VU1tx.TabIndex = 62
+        Me.VU1tx.UseVisualStyleBackColor = False
+        '
+        'VU2tx
+        '
+        Me.VU2tx.BackColor = System.Drawing.Color.Transparent
+        Me.VU2tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.VU2tx.FlatAppearance.BorderSize = 0
+        Me.VU2tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.VU2tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.VU2tx.ForeColor = System.Drawing.Color.Transparent
+        Me.VU2tx.Location = New System.Drawing.Point(541, 209)
+        Me.VU2tx.Name = "VU2tx"
+        Me.VU2tx.Size = New System.Drawing.Size(5, 5)
+        Me.VU2tx.TabIndex = 63
+        Me.VU2tx.UseVisualStyleBackColor = False
+        '
+        'MSR1tx
+        '
+        Me.MSR1tx.BackColor = System.Drawing.Color.Transparent
+        Me.MSR1tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.MSR1tx.FlatAppearance.BorderSize = 0
+        Me.MSR1tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.MSR1tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MSR1tx.ForeColor = System.Drawing.Color.Transparent
+        Me.MSR1tx.Location = New System.Drawing.Point(562, 223)
+        Me.MSR1tx.Name = "MSR1tx"
+        Me.MSR1tx.Size = New System.Drawing.Size(5, 5)
+        Me.MSR1tx.TabIndex = 64
+        Me.MSR1tx.UseVisualStyleBackColor = False
+        '
+        'MSR2tx
+        '
+        Me.MSR2tx.BackColor = System.Drawing.Color.Transparent
+        Me.MSR2tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.MSR2tx.FlatAppearance.BorderSize = 0
+        Me.MSR2tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.MSR2tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MSR2tx.ForeColor = System.Drawing.Color.Transparent
+        Me.MSR2tx.Location = New System.Drawing.Point(575, 244)
+        Me.MSR2tx.Name = "MSR2tx"
+        Me.MSR2tx.Size = New System.Drawing.Size(5, 5)
+        Me.MSR2tx.TabIndex = 65
+        Me.MSR2tx.UseVisualStyleBackColor = False
+        '
+        'MSR3tx
+        '
+        Me.MSR3tx.BackColor = System.Drawing.Color.Transparent
+        Me.MSR3tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.MSR3tx.FlatAppearance.BorderSize = 0
+        Me.MSR3tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.MSR3tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MSR3tx.ForeColor = System.Drawing.Color.Transparent
+        Me.MSR3tx.Location = New System.Drawing.Point(580, 268)
+        Me.MSR3tx.Name = "MSR3tx"
+        Me.MSR3tx.Size = New System.Drawing.Size(5, 5)
+        Me.MSR3tx.TabIndex = 66
+        Me.MSR3tx.UseVisualStyleBackColor = False
+        '
+        'MSR4tx
+        '
+        Me.MSR4tx.BackColor = System.Drawing.Color.Transparent
+        Me.MSR4tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.MSR4tx.FlatAppearance.BorderSize = 0
+        Me.MSR4tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.MSR4tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.MSR4tx.ForeColor = System.Drawing.Color.Transparent
+        Me.MSR4tx.Location = New System.Drawing.Point(575, 292)
+        Me.MSR4tx.Name = "MSR4tx"
+        Me.MSR4tx.Size = New System.Drawing.Size(5, 5)
+        Me.MSR4tx.TabIndex = 67
+        Me.MSR4tx.UseVisualStyleBackColor = False
+        '
+        'CDLtx
+        '
+        Me.CDLtx.BackColor = System.Drawing.Color.Transparent
+        Me.CDLtx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.CDLtx.FlatAppearance.BorderSize = 0
+        Me.CDLtx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.CDLtx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.CDLtx.ForeColor = System.Drawing.Color.Transparent
+        Me.CDLtx.Location = New System.Drawing.Point(561, 311)
+        Me.CDLtx.Name = "CDLtx"
+        Me.CDLtx.Size = New System.Drawing.Size(5, 5)
+        Me.CDLtx.TabIndex = 68
+        Me.CDLtx.UseVisualStyleBackColor = False
+        '
+        'lblDisplay
+        '
+        Me.lblDisplay.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblDisplay.BackColor = System.Drawing.Color.Transparent
+        Me.lblDisplay.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.lblDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.lblDisplay.Font = New System.Drawing.Font("Arial", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDisplay.ForeColor = System.Drawing.Color.LawnGreen
+        Me.lblDisplay.Location = New System.Drawing.Point(380, 34)
+        Me.lblDisplay.Name = "lblDisplay"
+        Me.lblDisplay.Size = New System.Drawing.Size(243, 45)
+        Me.lblDisplay.TabIndex = 69
+        '
+        'btnBKUPposition
+        '
+        Me.btnBKUPposition.BackColor = System.Drawing.Color.Transparent
+        Me.btnBKUPposition.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnBKUPposition.FlatAppearance.BorderSize = 0
+        Me.btnBKUPposition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnBKUPposition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnBKUPposition.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBKUPposition.Location = New System.Drawing.Point(412, 304)
+        Me.btnBKUPposition.Name = "btnBKUPposition"
+        Me.btnBKUPposition.Size = New System.Drawing.Size(35, 15)
+        Me.btnBKUPposition.TabIndex = 71
+        Me.btnBKUPposition.TabStop = False
+        Me.btnBKUPposition.UseVisualStyleBackColor = False
+        '
+        'btnINT1position
+        '
+        Me.btnINT1position.BackColor = System.Drawing.Color.Transparent
+        Me.btnINT1position.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnINT1position.FlatAppearance.BorderSize = 0
+        Me.btnINT1position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnINT1position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnINT1position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnINT1position.Location = New System.Drawing.Point(406, 285)
+        Me.btnINT1position.Name = "btnINT1position"
+        Me.btnINT1position.Size = New System.Drawing.Size(35, 15)
+        Me.btnINT1position.TabIndex = 72
+        Me.btnINT1position.TabStop = False
+        Me.btnINT1position.UseVisualStyleBackColor = False
+        '
+        'btnINT2position
+        '
+        Me.btnINT2position.BackColor = System.Drawing.Color.Transparent
+        Me.btnINT2position.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnINT2position.FlatAppearance.BorderSize = 0
+        Me.btnINT2position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnINT2position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnINT2position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnINT2position.Location = New System.Drawing.Point(404, 260)
+        Me.btnINT2position.Name = "btnINT2position"
+        Me.btnINT2position.Size = New System.Drawing.Size(35, 15)
+        Me.btnINT2position.TabIndex = 73
+        Me.btnINT2position.TabStop = False
+        Me.btnINT2position.UseVisualStyleBackColor = False
+        '
+        'btnATC1position
+        '
+        Me.btnATC1position.BackColor = System.Drawing.Color.Transparent
+        Me.btnATC1position.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnATC1position.FlatAppearance.BorderSize = 0
+        Me.btnATC1position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnATC1position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnATC1position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnATC1position.Location = New System.Drawing.Point(405, 230)
+        Me.btnATC1position.Name = "btnATC1position"
+        Me.btnATC1position.Size = New System.Drawing.Size(35, 15)
+        Me.btnATC1position.TabIndex = 74
+        Me.btnATC1position.TabStop = False
+        Me.btnATC1position.UseVisualStyleBackColor = False
+        '
+        'btnATC2position
+        '
+        Me.btnATC2position.BackColor = System.Drawing.Color.Transparent
+        Me.btnATC2position.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnATC2position.FlatAppearance.BorderSize = 0
+        Me.btnATC2position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnATC2position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnATC2position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnATC2position.Location = New System.Drawing.Point(419, 203)
+        Me.btnATC2position.Name = "btnATC2position"
+        Me.btnATC2position.Size = New System.Drawing.Size(35, 15)
+        Me.btnATC2position.TabIndex = 75
+        Me.btnATC2position.TabStop = False
+        Me.btnATC2position.UseVisualStyleBackColor = False
+        '
+        'btnHFposition
+        '
+        Me.btnHFposition.BackColor = System.Drawing.Color.Transparent
+        Me.btnHFposition.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnHFposition.FlatAppearance.BorderSize = 0
+        Me.btnHFposition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnHFposition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnHFposition.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHFposition.Location = New System.Drawing.Point(464, 179)
+        Me.btnHFposition.Name = "btnHFposition"
+        Me.btnHFposition.Size = New System.Drawing.Size(23, 15)
+        Me.btnHFposition.TabIndex = 76
+        Me.btnHFposition.TabStop = False
+        Me.btnHFposition.UseVisualStyleBackColor = False
+        '
+        'btnVU1position
+        '
+        Me.btnVU1position.BackColor = System.Drawing.Color.Transparent
+        Me.btnVU1position.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnVU1position.FlatAppearance.BorderSize = 0
+        Me.btnVU1position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnVU1position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnVU1position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVU1position.Location = New System.Drawing.Point(507, 170)
+        Me.btnVU1position.Name = "btnVU1position"
+        Me.btnVU1position.Size = New System.Drawing.Size(23, 15)
+        Me.btnVU1position.TabIndex = 77
+        Me.btnVU1position.TabStop = False
+        Me.btnVU1position.UseVisualStyleBackColor = False
+        '
+        'btnVU2position
+        '
+        Me.btnVU2position.BackColor = System.Drawing.Color.Transparent
+        Me.btnVU2position.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnVU2position.FlatAppearance.BorderSize = 0
+        Me.btnVU2position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnVU2position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnVU2position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnVU2position.Location = New System.Drawing.Point(550, 179)
+        Me.btnVU2position.Name = "btnVU2position"
+        Me.btnVU2position.Size = New System.Drawing.Size(23, 15)
+        Me.btnVU2position.TabIndex = 78
+        Me.btnVU2position.TabStop = False
+        Me.btnVU2position.UseVisualStyleBackColor = False
+        '
+        'btnMSR1position
+        '
+        Me.btnMSR1position.BackColor = System.Drawing.Color.Transparent
+        Me.btnMSR1position.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnMSR1position.FlatAppearance.BorderSize = 0
+        Me.btnMSR1position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnMSR1position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnMSR1position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMSR1position.Location = New System.Drawing.Point(578, 200)
+        Me.btnMSR1position.Name = "btnMSR1position"
+        Me.btnMSR1position.Size = New System.Drawing.Size(35, 15)
+        Me.btnMSR1position.TabIndex = 79
+        Me.btnMSR1position.TabStop = False
+        Me.btnMSR1position.UseVisualStyleBackColor = False
+        '
+        'btnMSR2position
+        '
+        Me.btnMSR2position.BackColor = System.Drawing.Color.Transparent
+        Me.btnMSR2position.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnMSR2position.FlatAppearance.BorderSize = 0
+        Me.btnMSR2position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnMSR2position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnMSR2position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMSR2position.Location = New System.Drawing.Point(594, 228)
+        Me.btnMSR2position.Name = "btnMSR2position"
+        Me.btnMSR2position.Size = New System.Drawing.Size(35, 15)
+        Me.btnMSR2position.TabIndex = 80
+        Me.btnMSR2position.TabStop = False
+        Me.btnMSR2position.UseVisualStyleBackColor = False
+        '
+        'btnMSR3position
+        '
+        Me.btnMSR3position.BackColor = System.Drawing.Color.Transparent
+        Me.btnMSR3position.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnMSR3position.FlatAppearance.BorderSize = 0
+        Me.btnMSR3position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnMSR3position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnMSR3position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMSR3position.Location = New System.Drawing.Point(601, 258)
+        Me.btnMSR3position.Name = "btnMSR3position"
+        Me.btnMSR3position.Size = New System.Drawing.Size(35, 15)
+        Me.btnMSR3position.TabIndex = 81
+        Me.btnMSR3position.TabStop = False
+        Me.btnMSR3position.UseVisualStyleBackColor = False
+        '
+        'btnMSR4position
+        '
+        Me.btnMSR4position.BackColor = System.Drawing.Color.Transparent
+        Me.btnMSR4position.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnMSR4position.FlatAppearance.BorderSize = 0
+        Me.btnMSR4position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnMSR4position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnMSR4position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMSR4position.Location = New System.Drawing.Point(597, 285)
+        Me.btnMSR4position.Name = "btnMSR4position"
+        Me.btnMSR4position.Size = New System.Drawing.Size(35, 15)
+        Me.btnMSR4position.TabIndex = 82
+        Me.btnMSR4position.TabStop = False
+        Me.btnMSR4position.UseVisualStyleBackColor = False
+        '
+        'btnCDLposition
+        '
+        Me.btnCDLposition.BackColor = System.Drawing.Color.Transparent
+        Me.btnCDLposition.Cursor = System.Windows.Forms.Cursors.Cross
+        Me.btnCDLposition.FlatAppearance.BorderSize = 0
+        Me.btnCDLposition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.btnCDLposition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.btnCDLposition.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCDLposition.Location = New System.Drawing.Point(591, 306)
+        Me.btnCDLposition.Name = "btnCDLposition"
+        Me.btnCDLposition.Size = New System.Drawing.Size(23, 15)
+        Me.btnCDLposition.TabIndex = 83
+        Me.btnCDLposition.TabStop = False
+        Me.btnCDLposition.UseVisualStyleBackColor = False
+        '
+        'ICUfailLight
+        '
+        Me.ICUfailLight.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.ICUfailLight.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ICUfailLight.ForeColor = System.Drawing.Color.Yellow
+        Me.ICUfailLight.Location = New System.Drawing.Point(451, 108)
+        Me.ICUfailLight.Name = "ICUfailLight"
+        Me.ICUfailLight.Size = New System.Drawing.Size(38, 14)
+        Me.ICUfailLight.TabIndex = 84
+        Me.ICUfailLight.Text = "ICU"
+        Me.ICUfailLight.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.ICUfailLight.Visible = False
+        '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.Color.Transparent
         Me.GroupBox1.BackgroundImage = CType(resources.GetObject("GroupBox1.BackgroundImage"), System.Drawing.Image)
         Me.GroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.GroupBox1.Controls.Add(Me.closeBtn)
+        Me.GroupBox1.Controls.Add(Me.moveBtn)
         Me.GroupBox1.Controls.Add(Me.ICUfailLight)
         Me.GroupBox1.Controls.Add(Me.btnCDLposition)
         Me.GroupBox1.Controls.Add(Me.btnMSR4position)
@@ -191,428 +688,46 @@ Partial Class MainForm
         Me.GroupBox1.Controls.Add(Me.btnHFADF)
         Me.GroupBox1.Controls.Add(Me.btnATC12)
         Me.GroupBox1.Controls.Add(Me.ShapeContainer1)
-        Me.GroupBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.GroupBox1.Location = New System.Drawing.Point(0, 0)
+        Me.GroupBox1.Location = New System.Drawing.Point(-2, -8)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(712, 339)
+        Me.GroupBox1.Size = New System.Drawing.Size(715, 345)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
-        'ICUfailLight
+        'closeBtn
         '
-        Me.ICUfailLight.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ICUfailLight.ForeColor = System.Drawing.Color.Yellow
-        Me.ICUfailLight.Location = New System.Drawing.Point(451, 106)
-        Me.ICUfailLight.Name = "ICUfailLight"
-        Me.ICUfailLight.Size = New System.Drawing.Size(38, 14)
-        Me.ICUfailLight.TabIndex = 84
-        Me.ICUfailLight.Text = "ICU"
-        Me.ICUfailLight.TextAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.ICUfailLight.Visible = False
+        Me.closeBtn.BackColor = System.Drawing.Color.Transparent
+        Me.closeBtn.FlatAppearance.BorderSize = 0
+        Me.closeBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.closeBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.closeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.closeBtn.Font = New System.Drawing.Font("Arial Narrow", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.closeBtn.ForeColor = System.Drawing.Color.Maroon
+        Me.closeBtn.Location = New System.Drawing.Point(669, 16)
+        Me.closeBtn.Margin = New System.Windows.Forms.Padding(0)
+        Me.closeBtn.Name = "closeBtn"
+        Me.closeBtn.Size = New System.Drawing.Size(43, 23)
+        Me.closeBtn.TabIndex = 86
+        Me.closeBtn.Text = "CLOSE"
+        Me.closeBtn.UseVisualStyleBackColor = False
+        Me.closeBtn.Visible = False
         '
-        'btnCDLposition
+        'moveBtn
         '
-        Me.btnCDLposition.BackColor = System.Drawing.Color.Transparent
-        Me.btnCDLposition.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnCDLposition.FlatAppearance.BorderSize = 0
-        Me.btnCDLposition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnCDLposition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCDLposition.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCDLposition.Location = New System.Drawing.Point(591, 306)
-        Me.btnCDLposition.Name = "btnCDLposition"
-        Me.btnCDLposition.Size = New System.Drawing.Size(23, 15)
-        Me.btnCDLposition.TabIndex = 83
-        Me.btnCDLposition.TabStop = False
-        Me.btnCDLposition.UseVisualStyleBackColor = False
-        '
-        'btnMSR4position
-        '
-        Me.btnMSR4position.BackColor = System.Drawing.Color.Transparent
-        Me.btnMSR4position.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnMSR4position.FlatAppearance.BorderSize = 0
-        Me.btnMSR4position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnMSR4position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnMSR4position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMSR4position.Location = New System.Drawing.Point(597, 285)
-        Me.btnMSR4position.Name = "btnMSR4position"
-        Me.btnMSR4position.Size = New System.Drawing.Size(35, 15)
-        Me.btnMSR4position.TabIndex = 82
-        Me.btnMSR4position.TabStop = False
-        Me.btnMSR4position.UseVisualStyleBackColor = False
-        '
-        'btnMSR3position
-        '
-        Me.btnMSR3position.BackColor = System.Drawing.Color.Transparent
-        Me.btnMSR3position.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnMSR3position.FlatAppearance.BorderSize = 0
-        Me.btnMSR3position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnMSR3position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnMSR3position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMSR3position.Location = New System.Drawing.Point(601, 258)
-        Me.btnMSR3position.Name = "btnMSR3position"
-        Me.btnMSR3position.Size = New System.Drawing.Size(35, 15)
-        Me.btnMSR3position.TabIndex = 81
-        Me.btnMSR3position.TabStop = False
-        Me.btnMSR3position.UseVisualStyleBackColor = False
-        '
-        'btnMSR2position
-        '
-        Me.btnMSR2position.BackColor = System.Drawing.Color.Transparent
-        Me.btnMSR2position.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnMSR2position.FlatAppearance.BorderSize = 0
-        Me.btnMSR2position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnMSR2position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnMSR2position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMSR2position.Location = New System.Drawing.Point(594, 228)
-        Me.btnMSR2position.Name = "btnMSR2position"
-        Me.btnMSR2position.Size = New System.Drawing.Size(35, 15)
-        Me.btnMSR2position.TabIndex = 80
-        Me.btnMSR2position.TabStop = False
-        Me.btnMSR2position.UseVisualStyleBackColor = False
-        '
-        'btnMSR1position
-        '
-        Me.btnMSR1position.BackColor = System.Drawing.Color.Transparent
-        Me.btnMSR1position.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnMSR1position.FlatAppearance.BorderSize = 0
-        Me.btnMSR1position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnMSR1position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnMSR1position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMSR1position.Location = New System.Drawing.Point(578, 200)
-        Me.btnMSR1position.Name = "btnMSR1position"
-        Me.btnMSR1position.Size = New System.Drawing.Size(35, 15)
-        Me.btnMSR1position.TabIndex = 79
-        Me.btnMSR1position.TabStop = False
-        Me.btnMSR1position.UseVisualStyleBackColor = False
-        '
-        'btnVU2position
-        '
-        Me.btnVU2position.BackColor = System.Drawing.Color.Transparent
-        Me.btnVU2position.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnVU2position.FlatAppearance.BorderSize = 0
-        Me.btnVU2position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnVU2position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnVU2position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnVU2position.Location = New System.Drawing.Point(550, 179)
-        Me.btnVU2position.Name = "btnVU2position"
-        Me.btnVU2position.Size = New System.Drawing.Size(23, 15)
-        Me.btnVU2position.TabIndex = 78
-        Me.btnVU2position.TabStop = False
-        Me.btnVU2position.UseVisualStyleBackColor = False
-        '
-        'btnVU1position
-        '
-        Me.btnVU1position.BackColor = System.Drawing.Color.Transparent
-        Me.btnVU1position.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnVU1position.FlatAppearance.BorderSize = 0
-        Me.btnVU1position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnVU1position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnVU1position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnVU1position.Location = New System.Drawing.Point(507, 170)
-        Me.btnVU1position.Name = "btnVU1position"
-        Me.btnVU1position.Size = New System.Drawing.Size(23, 15)
-        Me.btnVU1position.TabIndex = 77
-        Me.btnVU1position.TabStop = False
-        Me.btnVU1position.UseVisualStyleBackColor = False
-        '
-        'btnHFposition
-        '
-        Me.btnHFposition.BackColor = System.Drawing.Color.Transparent
-        Me.btnHFposition.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnHFposition.FlatAppearance.BorderSize = 0
-        Me.btnHFposition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnHFposition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnHFposition.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHFposition.Location = New System.Drawing.Point(464, 179)
-        Me.btnHFposition.Name = "btnHFposition"
-        Me.btnHFposition.Size = New System.Drawing.Size(23, 15)
-        Me.btnHFposition.TabIndex = 76
-        Me.btnHFposition.TabStop = False
-        Me.btnHFposition.UseVisualStyleBackColor = False
-        '
-        'btnATC2position
-        '
-        Me.btnATC2position.BackColor = System.Drawing.Color.Transparent
-        Me.btnATC2position.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnATC2position.FlatAppearance.BorderSize = 0
-        Me.btnATC2position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnATC2position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnATC2position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnATC2position.Location = New System.Drawing.Point(419, 203)
-        Me.btnATC2position.Name = "btnATC2position"
-        Me.btnATC2position.Size = New System.Drawing.Size(35, 15)
-        Me.btnATC2position.TabIndex = 75
-        Me.btnATC2position.TabStop = False
-        Me.btnATC2position.UseVisualStyleBackColor = False
-        '
-        'btnATC1position
-        '
-        Me.btnATC1position.BackColor = System.Drawing.Color.Transparent
-        Me.btnATC1position.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnATC1position.FlatAppearance.BorderSize = 0
-        Me.btnATC1position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnATC1position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnATC1position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnATC1position.Location = New System.Drawing.Point(405, 230)
-        Me.btnATC1position.Name = "btnATC1position"
-        Me.btnATC1position.Size = New System.Drawing.Size(35, 15)
-        Me.btnATC1position.TabIndex = 74
-        Me.btnATC1position.TabStop = False
-        Me.btnATC1position.UseVisualStyleBackColor = False
-        '
-        'btnINT2position
-        '
-        Me.btnINT2position.BackColor = System.Drawing.Color.Transparent
-        Me.btnINT2position.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnINT2position.FlatAppearance.BorderSize = 0
-        Me.btnINT2position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnINT2position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnINT2position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnINT2position.Location = New System.Drawing.Point(404, 260)
-        Me.btnINT2position.Name = "btnINT2position"
-        Me.btnINT2position.Size = New System.Drawing.Size(35, 15)
-        Me.btnINT2position.TabIndex = 73
-        Me.btnINT2position.TabStop = False
-        Me.btnINT2position.UseVisualStyleBackColor = False
-        '
-        'btnINT1position
-        '
-        Me.btnINT1position.BackColor = System.Drawing.Color.Transparent
-        Me.btnINT1position.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnINT1position.FlatAppearance.BorderSize = 0
-        Me.btnINT1position.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnINT1position.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnINT1position.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnINT1position.Location = New System.Drawing.Point(406, 285)
-        Me.btnINT1position.Name = "btnINT1position"
-        Me.btnINT1position.Size = New System.Drawing.Size(35, 15)
-        Me.btnINT1position.TabIndex = 72
-        Me.btnINT1position.TabStop = False
-        Me.btnINT1position.UseVisualStyleBackColor = False
-        '
-        'btnBKUPposition
-        '
-        Me.btnBKUPposition.BackColor = System.Drawing.Color.Transparent
-        Me.btnBKUPposition.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.btnBKUPposition.FlatAppearance.BorderSize = 0
-        Me.btnBKUPposition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnBKUPposition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnBKUPposition.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnBKUPposition.Location = New System.Drawing.Point(412, 304)
-        Me.btnBKUPposition.Name = "btnBKUPposition"
-        Me.btnBKUPposition.Size = New System.Drawing.Size(35, 15)
-        Me.btnBKUPposition.TabIndex = 71
-        Me.btnBKUPposition.TabStop = False
-        Me.btnBKUPposition.UseVisualStyleBackColor = False
-        '
-        'lblDisplay
-        '
-        Me.lblDisplay.BackColor = System.Drawing.Color.Transparent
-        Me.lblDisplay.Cursor = System.Windows.Forms.Cursors.Cross
-        Me.lblDisplay.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lblDisplay.Font = New System.Drawing.Font("Arial", 27.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDisplay.ForeColor = System.Drawing.Color.LawnGreen
-        Me.lblDisplay.Location = New System.Drawing.Point(379, 31)
-        Me.lblDisplay.Name = "lblDisplay"
-        Me.lblDisplay.Size = New System.Drawing.Size(243, 45)
-        Me.lblDisplay.TabIndex = 69
-        '
-        'CDLtx
-        '
-        Me.CDLtx.BackColor = System.Drawing.Color.Transparent
-        Me.CDLtx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.CDLtx.FlatAppearance.BorderSize = 0
-        Me.CDLtx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.CDLtx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.CDLtx.ForeColor = System.Drawing.Color.Transparent
-        Me.CDLtx.Location = New System.Drawing.Point(559, 309)
-        Me.CDLtx.Name = "CDLtx"
-        Me.CDLtx.Size = New System.Drawing.Size(5, 5)
-        Me.CDLtx.TabIndex = 68
-        Me.CDLtx.UseVisualStyleBackColor = False
-        '
-        'MSR4tx
-        '
-        Me.MSR4tx.BackColor = System.Drawing.Color.Transparent
-        Me.MSR4tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.MSR4tx.FlatAppearance.BorderSize = 0
-        Me.MSR4tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.MSR4tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MSR4tx.ForeColor = System.Drawing.Color.Transparent
-        Me.MSR4tx.Location = New System.Drawing.Point(572, 290)
-        Me.MSR4tx.Name = "MSR4tx"
-        Me.MSR4tx.Size = New System.Drawing.Size(5, 5)
-        Me.MSR4tx.TabIndex = 67
-        Me.MSR4tx.UseVisualStyleBackColor = False
-        '
-        'MSR3tx
-        '
-        Me.MSR3tx.BackColor = System.Drawing.Color.Transparent
-        Me.MSR3tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.MSR3tx.FlatAppearance.BorderSize = 0
-        Me.MSR3tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.MSR3tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MSR3tx.ForeColor = System.Drawing.Color.Transparent
-        Me.MSR3tx.Location = New System.Drawing.Point(577, 266)
-        Me.MSR3tx.Name = "MSR3tx"
-        Me.MSR3tx.Size = New System.Drawing.Size(5, 5)
-        Me.MSR3tx.TabIndex = 66
-        Me.MSR3tx.UseVisualStyleBackColor = False
-        '
-        'MSR2tx
-        '
-        Me.MSR2tx.BackColor = System.Drawing.Color.Transparent
-        Me.MSR2tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.MSR2tx.FlatAppearance.BorderSize = 0
-        Me.MSR2tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.MSR2tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MSR2tx.ForeColor = System.Drawing.Color.Transparent
-        Me.MSR2tx.Location = New System.Drawing.Point(573, 242)
-        Me.MSR2tx.Name = "MSR2tx"
-        Me.MSR2tx.Size = New System.Drawing.Size(5, 5)
-        Me.MSR2tx.TabIndex = 65
-        Me.MSR2tx.UseVisualStyleBackColor = False
-        '
-        'MSR1tx
-        '
-        Me.MSR1tx.BackColor = System.Drawing.Color.Transparent
-        Me.MSR1tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.MSR1tx.FlatAppearance.BorderSize = 0
-        Me.MSR1tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.MSR1tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.MSR1tx.ForeColor = System.Drawing.Color.Transparent
-        Me.MSR1tx.Location = New System.Drawing.Point(560, 221)
-        Me.MSR1tx.Name = "MSR1tx"
-        Me.MSR1tx.Size = New System.Drawing.Size(5, 5)
-        Me.MSR1tx.TabIndex = 64
-        Me.MSR1tx.UseVisualStyleBackColor = False
-        '
-        'VU2tx
-        '
-        Me.VU2tx.BackColor = System.Drawing.Color.Transparent
-        Me.VU2tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.VU2tx.FlatAppearance.BorderSize = 0
-        Me.VU2tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.VU2tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.VU2tx.ForeColor = System.Drawing.Color.Transparent
-        Me.VU2tx.Location = New System.Drawing.Point(539, 207)
-        Me.VU2tx.Name = "VU2tx"
-        Me.VU2tx.Size = New System.Drawing.Size(5, 5)
-        Me.VU2tx.TabIndex = 63
-        Me.VU2tx.UseVisualStyleBackColor = False
-        '
-        'VU1tx
-        '
-        Me.VU1tx.BackColor = System.Drawing.Color.Transparent
-        Me.VU1tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.VU1tx.FlatAppearance.BorderSize = 0
-        Me.VU1tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.VU1tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.VU1tx.ForeColor = System.Drawing.Color.Transparent
-        Me.VU1tx.Location = New System.Drawing.Point(515, 202)
-        Me.VU1tx.Name = "VU1tx"
-        Me.VU1tx.Size = New System.Drawing.Size(5, 5)
-        Me.VU1tx.TabIndex = 62
-        Me.VU1tx.UseVisualStyleBackColor = False
-        '
-        'HFtx
-        '
-        Me.HFtx.BackColor = System.Drawing.Color.Transparent
-        Me.HFtx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.HFtx.FlatAppearance.BorderSize = 0
-        Me.HFtx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.HFtx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.HFtx.ForeColor = System.Drawing.Color.Transparent
-        Me.HFtx.Location = New System.Drawing.Point(490, 208)
-        Me.HFtx.Name = "HFtx"
-        Me.HFtx.Size = New System.Drawing.Size(5, 5)
-        Me.HFtx.TabIndex = 61
-        Me.HFtx.UseVisualStyleBackColor = False
-        '
-        'ATC2tx
-        '
-        Me.ATC2tx.BackColor = System.Drawing.Color.Transparent
-        Me.ATC2tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ATC2tx.FlatAppearance.BorderSize = 0
-        Me.ATC2tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.ATC2tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ATC2tx.ForeColor = System.Drawing.Color.Transparent
-        Me.ATC2tx.Location = New System.Drawing.Point(471, 221)
-        Me.ATC2tx.Name = "ATC2tx"
-        Me.ATC2tx.Size = New System.Drawing.Size(5, 5)
-        Me.ATC2tx.TabIndex = 60
-        Me.ATC2tx.UseVisualStyleBackColor = False
-        '
-        'ATC1tx
-        '
-        Me.ATC1tx.BackColor = System.Drawing.Color.Transparent
-        Me.ATC1tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ATC1tx.FlatAppearance.BorderSize = 0
-        Me.ATC1tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.ATC1tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.ATC1tx.ForeColor = System.Drawing.Color.Transparent
-        Me.ATC1tx.Location = New System.Drawing.Point(457, 241)
-        Me.ATC1tx.Name = "ATC1tx"
-        Me.ATC1tx.Size = New System.Drawing.Size(5, 5)
-        Me.ATC1tx.TabIndex = 59
-        Me.ATC1tx.UseVisualStyleBackColor = False
-        '
-        'INT2tx
-        '
-        Me.INT2tx.BackColor = System.Drawing.Color.Transparent
-        Me.INT2tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.INT2tx.FlatAppearance.BorderSize = 0
-        Me.INT2tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.INT2tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.INT2tx.ForeColor = System.Drawing.Color.Transparent
-        Me.INT2tx.Location = New System.Drawing.Point(452, 266)
-        Me.INT2tx.Name = "INT2tx"
-        Me.INT2tx.Size = New System.Drawing.Size(5, 5)
-        Me.INT2tx.TabIndex = 58
-        Me.INT2tx.UseVisualStyleBackColor = False
-        '
-        'INT1tx
-        '
-        Me.INT1tx.BackColor = System.Drawing.Color.GreenYellow
-        Me.INT1tx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.INT1tx.FlatAppearance.BorderSize = 0
-        Me.INT1tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.INT1tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.INT1tx.ForeColor = System.Drawing.Color.Transparent
-        Me.INT1tx.Location = New System.Drawing.Point(458, 290)
-        Me.INT1tx.Name = "INT1tx"
-        Me.INT1tx.Size = New System.Drawing.Size(5, 5)
-        Me.INT1tx.TabIndex = 57
-        Me.INT1tx.UseVisualStyleBackColor = False
-        '
-        'BKUPtx
-        '
-        Me.BKUPtx.BackColor = System.Drawing.Color.Transparent
-        Me.BKUPtx.FlatAppearance.BorderColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.BKUPtx.FlatAppearance.BorderSize = 0
-        Me.BKUPtx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.BKUPtx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BKUPtx.ForeColor = System.Drawing.Color.Transparent
-        Me.BKUPtx.Location = New System.Drawing.Point(472, 311)
-        Me.BKUPtx.Name = "BKUPtx"
-        Me.BKUPtx.Size = New System.Drawing.Size(5, 5)
-        Me.BKUPtx.TabIndex = 56
-        Me.BKUPtx.UseVisualStyleBackColor = False
-        '
-        'btnCALLlight
-        '
-        Me.btnCALLlight.BackColor = System.Drawing.Color.Transparent
-        Me.btnCALLlight.FlatAppearance.BorderColor = System.Drawing.SystemColors.InfoText
-        Me.btnCALLlight.FlatAppearance.BorderSize = 0
-        Me.btnCALLlight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCALLlight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCALLlight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnCALLlight.Location = New System.Drawing.Point(599, 109)
-        Me.btnCALLlight.Name = "btnCALLlight"
-        Me.btnCALLlight.Size = New System.Drawing.Size(5, 5)
-        Me.btnCALLlight.TabIndex = 55
-        Me.btnCALLlight.TabStop = False
-        Me.btnCALLlight.UseVisualStyleBackColor = False
+        Me.moveBtn.BackColor = System.Drawing.Color.Transparent
+        Me.moveBtn.FlatAppearance.BorderSize = 0
+        Me.moveBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver
+        Me.moveBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver
+        Me.moveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.moveBtn.Font = New System.Drawing.Font("Arial Narrow", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.moveBtn.ForeColor = System.Drawing.Color.Maroon
+        Me.moveBtn.Location = New System.Drawing.Point(669, 311)
+        Me.moveBtn.Name = "moveBtn"
+        Me.moveBtn.Size = New System.Drawing.Size(42, 23)
+        Me.moveBtn.TabIndex = 85
+        Me.moveBtn.Text = "MOVE"
+        Me.moveBtn.UseVisualStyleBackColor = False
+        Me.moveBtn.Visible = False
         '
         'btnAUXrightLight
         '
@@ -622,7 +737,7 @@ Partial Class MainForm
         Me.btnAUXrightLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnAUXrightLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAUXrightLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnAUXrightLight.Location = New System.Drawing.Point(261, 247)
+        Me.btnAUXrightLight.Location = New System.Drawing.Point(261, 248)
         Me.btnAUXrightLight.Name = "btnAUXrightLight"
         Me.btnAUXrightLight.Size = New System.Drawing.Size(5, 5)
         Me.btnAUXrightLight.TabIndex = 50
@@ -637,7 +752,7 @@ Partial Class MainForm
         Me.btnAUXleftLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnAUXleftLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAUXleftLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnAUXleftLight.Location = New System.Drawing.Point(234, 247)
+        Me.btnAUXleftLight.Location = New System.Drawing.Point(234, 248)
         Me.btnAUXleftLight.Name = "btnAUXleftLight"
         Me.btnAUXleftLight.Size = New System.Drawing.Size(5, 5)
         Me.btnAUXleftLight.TabIndex = 49
@@ -652,7 +767,7 @@ Partial Class MainForm
         Me.btnMSR4rightLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR4rightLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMSR4rightLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnMSR4rightLight.Location = New System.Drawing.Point(187, 247)
+        Me.btnMSR4rightLight.Location = New System.Drawing.Point(187, 248)
         Me.btnMSR4rightLight.Name = "btnMSR4rightLight"
         Me.btnMSR4rightLight.Size = New System.Drawing.Size(5, 5)
         Me.btnMSR4rightLight.TabIndex = 48
@@ -667,7 +782,7 @@ Partial Class MainForm
         Me.btnMSR4leftLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR4leftLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMSR4leftLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnMSR4leftLight.Location = New System.Drawing.Point(160, 247)
+        Me.btnMSR4leftLight.Location = New System.Drawing.Point(160, 248)
         Me.btnMSR4leftLight.Name = "btnMSR4leftLight"
         Me.btnMSR4leftLight.Size = New System.Drawing.Size(5, 5)
         Me.btnMSR4leftLight.TabIndex = 47
@@ -682,7 +797,7 @@ Partial Class MainForm
         Me.btnMSR3rightLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR3rightLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMSR3rightLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnMSR3rightLight.Location = New System.Drawing.Point(112, 247)
+        Me.btnMSR3rightLight.Location = New System.Drawing.Point(112, 248)
         Me.btnMSR3rightLight.Name = "btnMSR3rightLight"
         Me.btnMSR3rightLight.Size = New System.Drawing.Size(5, 5)
         Me.btnMSR3rightLight.TabIndex = 46
@@ -697,7 +812,7 @@ Partial Class MainForm
         Me.btnMSR3leftLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR3leftLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMSR3leftLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnMSR3leftLight.Location = New System.Drawing.Point(85, 247)
+        Me.btnMSR3leftLight.Location = New System.Drawing.Point(85, 248)
         Me.btnMSR3leftLight.Name = "btnMSR3leftLight"
         Me.btnMSR3leftLight.Size = New System.Drawing.Size(5, 5)
         Me.btnMSR3leftLight.TabIndex = 45
@@ -712,7 +827,7 @@ Partial Class MainForm
         Me.btnCDLrightLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnCDLrightLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCDLrightLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnCDLrightLight.Location = New System.Drawing.Point(261, 178)
+        Me.btnCDLrightLight.Location = New System.Drawing.Point(261, 179)
         Me.btnCDLrightLight.Name = "btnCDLrightLight"
         Me.btnCDLrightLight.Size = New System.Drawing.Size(5, 5)
         Me.btnCDLrightLight.TabIndex = 42
@@ -727,7 +842,7 @@ Partial Class MainForm
         Me.btnCDLleftLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnCDLleftLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCDLleftLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnCDLleftLight.Location = New System.Drawing.Point(234, 178)
+        Me.btnCDLleftLight.Location = New System.Drawing.Point(234, 179)
         Me.btnCDLleftLight.Name = "btnCDLleftLight"
         Me.btnCDLleftLight.Size = New System.Drawing.Size(5, 5)
         Me.btnCDLleftLight.TabIndex = 41
@@ -742,7 +857,7 @@ Partial Class MainForm
         Me.btnMSR2rightLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR2rightLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMSR2rightLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnMSR2rightLight.Location = New System.Drawing.Point(187, 178)
+        Me.btnMSR2rightLight.Location = New System.Drawing.Point(187, 179)
         Me.btnMSR2rightLight.Name = "btnMSR2rightLight"
         Me.btnMSR2rightLight.Size = New System.Drawing.Size(5, 5)
         Me.btnMSR2rightLight.TabIndex = 40
@@ -757,7 +872,7 @@ Partial Class MainForm
         Me.btnMSR2leftLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR2leftLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMSR2leftLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnMSR2leftLight.Location = New System.Drawing.Point(160, 178)
+        Me.btnMSR2leftLight.Location = New System.Drawing.Point(160, 179)
         Me.btnMSR2leftLight.Name = "btnMSR2leftLight"
         Me.btnMSR2leftLight.Size = New System.Drawing.Size(5, 5)
         Me.btnMSR2leftLight.TabIndex = 39
@@ -772,7 +887,7 @@ Partial Class MainForm
         Me.btnMSR1rightLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR1rightLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMSR1rightLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnMSR1rightLight.Location = New System.Drawing.Point(112, 178)
+        Me.btnMSR1rightLight.Location = New System.Drawing.Point(112, 179)
         Me.btnMSR1rightLight.Name = "btnMSR1rightLight"
         Me.btnMSR1rightLight.Size = New System.Drawing.Size(5, 5)
         Me.btnMSR1rightLight.TabIndex = 38
@@ -787,7 +902,7 @@ Partial Class MainForm
         Me.btnMSR1leftLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR1leftLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnMSR1leftLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnMSR1leftLight.Location = New System.Drawing.Point(85, 178)
+        Me.btnMSR1leftLight.Location = New System.Drawing.Point(85, 179)
         Me.btnMSR1leftLight.Name = "btnMSR1leftLight"
         Me.btnMSR1leftLight.Size = New System.Drawing.Size(5, 5)
         Me.btnMSR1leftLight.TabIndex = 37
@@ -913,36 +1028,6 @@ Partial Class MainForm
         Me.btnVOR1light.TabIndex = 29
         Me.btnVOR1light.TabStop = False
         Me.btnVOR1light.UseVisualStyleBackColor = False
-        '
-        'btnMODErightLight
-        '
-        Me.btnMODErightLight.BackColor = System.Drawing.Color.Transparent
-        Me.btnMODErightLight.FlatAppearance.BorderColor = System.Drawing.SystemColors.InfoText
-        Me.btnMODErightLight.FlatAppearance.BorderSize = 0
-        Me.btnMODErightLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnMODErightLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMODErightLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnMODErightLight.Location = New System.Drawing.Point(406, 109)
-        Me.btnMODErightLight.Name = "btnMODErightLight"
-        Me.btnMODErightLight.Size = New System.Drawing.Size(5, 5)
-        Me.btnMODErightLight.TabIndex = 28
-        Me.btnMODErightLight.TabStop = False
-        Me.btnMODErightLight.UseVisualStyleBackColor = False
-        '
-        'btnMODEleftLight
-        '
-        Me.btnMODEleftLight.BackColor = System.Drawing.Color.Transparent
-        Me.btnMODEleftLight.FlatAppearance.BorderColor = System.Drawing.SystemColors.InfoText
-        Me.btnMODEleftLight.FlatAppearance.BorderSize = 0
-        Me.btnMODEleftLight.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnMODEleftLight.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMODEleftLight.ForeColor = System.Drawing.Color.Transparent
-        Me.btnMODEleftLight.Location = New System.Drawing.Point(379, 109)
-        Me.btnMODEleftLight.Name = "btnMODEleftLight"
-        Me.btnMODEleftLight.Size = New System.Drawing.Size(5, 5)
-        Me.btnMODEleftLight.TabIndex = 27
-        Me.btnMODEleftLight.TabStop = False
-        Me.btnMODEleftLight.UseVisualStyleBackColor = False
         '
         'btnVU2Slight
         '
@@ -1071,7 +1156,7 @@ Partial Class MainForm
         Me.btnMSR2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnMSR2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMSR2.Location = New System.Drawing.Point(156, 187)
+        Me.btnMSR2.Location = New System.Drawing.Point(156, 188)
         Me.btnMSR2.Name = "btnMSR2"
         Me.btnMSR2.Size = New System.Drawing.Size(40, 42)
         Me.btnMSR2.TabIndex = 18
@@ -1086,7 +1171,7 @@ Partial Class MainForm
         Me.btnMSR4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnMSR4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMSR4.Location = New System.Drawing.Point(156, 256)
+        Me.btnMSR4.Location = New System.Drawing.Point(156, 257)
         Me.btnMSR4.Name = "btnMSR4"
         Me.btnMSR4.Size = New System.Drawing.Size(40, 42)
         Me.btnMSR4.TabIndex = 17
@@ -1116,7 +1201,7 @@ Partial Class MainForm
         Me.btnAUX.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnAUX.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnAUX.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAUX.Location = New System.Drawing.Point(229, 256)
+        Me.btnAUX.Location = New System.Drawing.Point(229, 257)
         Me.btnAUX.Name = "btnAUX"
         Me.btnAUX.Size = New System.Drawing.Size(40, 42)
         Me.btnAUX.TabIndex = 15
@@ -1146,57 +1231,12 @@ Partial Class MainForm
         Me.btnCDL.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnCDL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnCDL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCDL.Location = New System.Drawing.Point(229, 187)
+        Me.btnCDL.Location = New System.Drawing.Point(229, 188)
         Me.btnCDL.Name = "btnCDL"
         Me.btnCDL.Size = New System.Drawing.Size(40, 42)
         Me.btnCDL.TabIndex = 13
         Me.btnCDL.TabStop = False
         Me.btnCDL.UseVisualStyleBackColor = False
-        '
-        'btnCALL
-        '
-        Me.btnCALL.BackColor = System.Drawing.Color.Transparent
-        Me.btnCALL.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnCALL.FlatAppearance.BorderSize = 0
-        Me.btnCALL.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnCALL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnCALL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCALL.Location = New System.Drawing.Point(582, 118)
-        Me.btnCALL.Name = "btnCALL"
-        Me.btnCALL.Size = New System.Drawing.Size(40, 42)
-        Me.btnCALL.TabIndex = 12
-        Me.btnCALL.TabStop = False
-        Me.btnCALL.UseVisualStyleBackColor = False
-        '
-        'btnSEL
-        '
-        Me.btnSEL.BackColor = System.Drawing.Color.Transparent
-        Me.btnSEL.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnSEL.FlatAppearance.BorderSize = 0
-        Me.btnSEL.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnSEL.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnSEL.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSEL.Location = New System.Drawing.Point(449, 118)
-        Me.btnSEL.Name = "btnSEL"
-        Me.btnSEL.Size = New System.Drawing.Size(40, 42)
-        Me.btnSEL.TabIndex = 11
-        Me.btnSEL.TabStop = False
-        Me.btnSEL.UseVisualStyleBackColor = False
-        '
-        'btnMODE
-        '
-        Me.btnMODE.BackColor = System.Drawing.Color.Transparent
-        Me.btnMODE.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnMODE.FlatAppearance.BorderSize = 0
-        Me.btnMODE.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.btnMODE.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.btnMODE.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMODE.Location = New System.Drawing.Point(375, 118)
-        Me.btnMODE.Name = "btnMODE"
-        Me.btnMODE.Size = New System.Drawing.Size(40, 42)
-        Me.btnMODE.TabIndex = 10
-        Me.btnMODE.TabStop = False
-        Me.btnMODE.UseVisualStyleBackColor = False
         '
         'btnInt12
         '
@@ -1252,7 +1292,7 @@ Partial Class MainForm
         Me.btnMSR3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnMSR3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMSR3.Location = New System.Drawing.Point(80, 256)
+        Me.btnMSR3.Location = New System.Drawing.Point(80, 257)
         Me.btnMSR3.Name = "btnMSR3"
         Me.btnMSR3.Size = New System.Drawing.Size(40, 42)
         Me.btnMSR3.TabIndex = 6
@@ -1267,7 +1307,7 @@ Partial Class MainForm
         Me.btnMSR1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnMSR1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnMSR1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnMSR1.Location = New System.Drawing.Point(80, 187)
+        Me.btnMSR1.Location = New System.Drawing.Point(80, 188)
         Me.btnMSR1.Name = "btnMSR1"
         Me.btnMSR1.Size = New System.Drawing.Size(40, 42)
         Me.btnMSR1.TabIndex = 5
@@ -1357,19 +1397,20 @@ Partial Class MainForm
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
         Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.OvalShape1})
-        Me.ShapeContainer1.Size = New System.Drawing.Size(706, 320)
+        Me.ShapeContainer1.Size = New System.Drawing.Size(709, 326)
         Me.ShapeContainer1.TabIndex = 70
         Me.ShapeContainer1.TabStop = False
         '
         'OvalShape1
         '
+        Me.OvalShape1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.OvalShape1.BackgroundImage = Global.MCAP_Project.My.Resources.Resources.INT1
         Me.OvalShape1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.OvalShape1.BorderColor = System.Drawing.Color.Transparent
         Me.OvalShape1.Cursor = System.Windows.Forms.Cursors.Default
         Me.OvalShape1.FillColor = System.Drawing.Color.Transparent
         Me.OvalShape1.FillGradientColor = System.Drawing.Color.Transparent
-        Me.OvalShape1.Location = New System.Drawing.Point(461, 201)
+        Me.OvalShape1.Location = New System.Drawing.Point(464, 203)
         Me.OvalShape1.Name = "OvalShape1"
         Me.OvalShape1.SelectionColor = System.Drawing.Color.Transparent
         Me.OvalShape1.Size = New System.Drawing.Size(106, 102)
@@ -1378,42 +1419,60 @@ Partial Class MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(712, 339)
+        Me.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.ClientSize = New System.Drawing.Size(710, 328)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Cursor = System.Windows.Forms.Cursors.Default
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Location = New System.Drawing.Point(350, 150)
-        Me.MaximizeBox = False
         Me.MaximumSize = New System.Drawing.Size(732, 381)
-        Me.MinimumSize = New System.Drawing.Size(732, 381)
+        Me.MinimumSize = New System.Drawing.Size(702, 320)
         Me.Name = "MainForm"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.Manual
         Me.Text = "MCAP Desktop Simulator "
         Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents btnATC12 As System.Windows.Forms.Button
-    Friend WithEvents btnMSR2 As System.Windows.Forms.Button
-    Friend WithEvents btnMSR4 As System.Windows.Forms.Button
-    Friend WithEvents btnDown As System.Windows.Forms.Button
-    Friend WithEvents btnAUX As System.Windows.Forms.Button
-    Friend WithEvents btnUp As System.Windows.Forms.Button
-    Friend WithEvents btnCDL As System.Windows.Forms.Button
-    Friend WithEvents btnCALL As System.Windows.Forms.Button
-    Friend WithEvents btnSEL As System.Windows.Forms.Button
     Friend WithEvents btnMODE As System.Windows.Forms.Button
-    Friend WithEvents btnInt12 As System.Windows.Forms.Button
-    Friend WithEvents btnDME As System.Windows.Forms.Button
-    Friend WithEvents btnMKRTCN As System.Windows.Forms.Button
-    Friend WithEvents btnMSR3 As System.Windows.Forms.Button
-    Friend WithEvents btnMSR1 As System.Windows.Forms.Button
-    Friend WithEvents btnVOR12 As System.Windows.Forms.Button
-    Friend WithEvents btnVU2 As System.Windows.Forms.Button
-    Friend WithEvents btnVU1 As System.Windows.Forms.Button
-    Friend WithEvents btnHFADF As System.Windows.Forms.Button
+    Friend WithEvents btnSEL As System.Windows.Forms.Button
+    Friend WithEvents btnCALL As System.Windows.Forms.Button
+    Friend WithEvents btnMODEleftLight As System.Windows.Forms.Button
+    Friend WithEvents btnMODErightLight As System.Windows.Forms.Button
     Friend WithEvents btnCALLlight As System.Windows.Forms.Button
+    Friend WithEvents BKUPtx As System.Windows.Forms.Button
+    Friend WithEvents INT1tx As System.Windows.Forms.Button
+    Friend WithEvents INT2tx As System.Windows.Forms.Button
+    Friend WithEvents ATC1tx As System.Windows.Forms.Button
+    Friend WithEvents ATC2tx As System.Windows.Forms.Button
+    Friend WithEvents HFtx As System.Windows.Forms.Button
+    Friend WithEvents VU1tx As System.Windows.Forms.Button
+    Friend WithEvents VU2tx As System.Windows.Forms.Button
+    Friend WithEvents MSR1tx As System.Windows.Forms.Button
+    Friend WithEvents MSR2tx As System.Windows.Forms.Button
+    Friend WithEvents MSR3tx As System.Windows.Forms.Button
+    Friend WithEvents MSR4tx As System.Windows.Forms.Button
+    Friend WithEvents CDLtx As System.Windows.Forms.Button
+    Friend WithEvents lblDisplay As System.Windows.Forms.Label
+    Friend WithEvents btnBKUPposition As System.Windows.Forms.Button
+    Friend WithEvents btnINT1position As System.Windows.Forms.Button
+    Friend WithEvents btnINT2position As System.Windows.Forms.Button
+    Friend WithEvents btnATC1position As System.Windows.Forms.Button
+    Friend WithEvents btnATC2position As System.Windows.Forms.Button
+    Friend WithEvents btnHFposition As System.Windows.Forms.Button
+    Friend WithEvents btnVU1position As System.Windows.Forms.Button
+    Friend WithEvents btnVU2position As System.Windows.Forms.Button
+    Friend WithEvents btnMSR1position As System.Windows.Forms.Button
+    Friend WithEvents btnMSR2position As System.Windows.Forms.Button
+    Friend WithEvents btnMSR3position As System.Windows.Forms.Button
+    Friend WithEvents btnMSR4position As System.Windows.Forms.Button
+    Friend WithEvents btnCDLposition As System.Windows.Forms.Button
+    Friend WithEvents ICUfailLight As System.Windows.Forms.Label
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
+    Friend WithEvents OvalShape1 As Microsoft.VisualBasic.PowerPacks.OvalShape
     Friend WithEvents btnAUXrightLight As System.Windows.Forms.Button
     Friend WithEvents btnAUXleftLight As System.Windows.Forms.Button
     Friend WithEvents btnMSR4rightLight As System.Windows.Forms.Button
@@ -1434,8 +1493,6 @@ Partial Class MainForm
     Friend WithEvents btnMBlight As System.Windows.Forms.Button
     Friend WithEvents btnVOR2light As System.Windows.Forms.Button
     Friend WithEvents btnVOR1light As System.Windows.Forms.Button
-    Friend WithEvents btnMODErightLight As System.Windows.Forms.Button
-    Friend WithEvents btnMODEleftLight As System.Windows.Forms.Button
     Friend WithEvents btnVU2Slight As System.Windows.Forms.Button
     Friend WithEvents btnVU2light As System.Windows.Forms.Button
     Friend WithEvents btnVU1Slight As System.Windows.Forms.Button
@@ -1444,35 +1501,23 @@ Partial Class MainForm
     Friend WithEvents btnHFlight As System.Windows.Forms.Button
     Friend WithEvents btnATC2light As System.Windows.Forms.Button
     Friend WithEvents btnATC1light As System.Windows.Forms.Button
-    Friend WithEvents CDLtx As System.Windows.Forms.Button
-    Friend WithEvents MSR4tx As System.Windows.Forms.Button
-    Friend WithEvents MSR3tx As System.Windows.Forms.Button
-    Friend WithEvents MSR2tx As System.Windows.Forms.Button
-    Friend WithEvents MSR1tx As System.Windows.Forms.Button
-    Friend WithEvents VU2tx As System.Windows.Forms.Button
-    Friend WithEvents VU1tx As System.Windows.Forms.Button
-    Friend WithEvents HFtx As System.Windows.Forms.Button
-    Friend WithEvents ATC2tx As System.Windows.Forms.Button
-    Friend WithEvents ATC1tx As System.Windows.Forms.Button
-    Friend WithEvents INT2tx As System.Windows.Forms.Button
-    Friend WithEvents INT1tx As System.Windows.Forms.Button
-    Friend WithEvents BKUPtx As System.Windows.Forms.Button
-    Friend WithEvents lblDisplay As System.Windows.Forms.Label
-    Friend WithEvents ShapeContainer1 As Microsoft.VisualBasic.PowerPacks.ShapeContainer
-    Friend WithEvents OvalShape1 As Microsoft.VisualBasic.PowerPacks.OvalShape
-    Friend WithEvents btnCDLposition As System.Windows.Forms.Button
-    Friend WithEvents btnMSR4position As System.Windows.Forms.Button
-    Friend WithEvents btnMSR3position As System.Windows.Forms.Button
-    Friend WithEvents btnMSR2position As System.Windows.Forms.Button
-    Friend WithEvents btnMSR1position As System.Windows.Forms.Button
-    Friend WithEvents btnVU2position As System.Windows.Forms.Button
-    Friend WithEvents btnVU1position As System.Windows.Forms.Button
-    Friend WithEvents btnHFposition As System.Windows.Forms.Button
-    Friend WithEvents btnATC2position As System.Windows.Forms.Button
-    Friend WithEvents btnATC1position As System.Windows.Forms.Button
-    Friend WithEvents btnINT2position As System.Windows.Forms.Button
-    Friend WithEvents btnINT1position As System.Windows.Forms.Button
-    Friend WithEvents btnBKUPposition As System.Windows.Forms.Button
-    Friend WithEvents ICUfailLight As System.Windows.Forms.Label
+    Friend WithEvents btnMSR2 As System.Windows.Forms.Button
+    Friend WithEvents btnMSR4 As System.Windows.Forms.Button
+    Friend WithEvents btnDown As System.Windows.Forms.Button
+    Friend WithEvents btnAUX As System.Windows.Forms.Button
+    Friend WithEvents btnUp As System.Windows.Forms.Button
+    Friend WithEvents btnCDL As System.Windows.Forms.Button
+    Friend WithEvents btnInt12 As System.Windows.Forms.Button
+    Friend WithEvents btnDME As System.Windows.Forms.Button
+    Friend WithEvents btnMKRTCN As System.Windows.Forms.Button
+    Friend WithEvents btnMSR3 As System.Windows.Forms.Button
+    Friend WithEvents btnMSR1 As System.Windows.Forms.Button
+    Friend WithEvents btnVOR12 As System.Windows.Forms.Button
+    Friend WithEvents btnVU2 As System.Windows.Forms.Button
+    Friend WithEvents btnVU1 As System.Windows.Forms.Button
+    Friend WithEvents btnHFADF As System.Windows.Forms.Button
+    Friend WithEvents btnATC12 As System.Windows.Forms.Button
+    Friend WithEvents moveBtn As System.Windows.Forms.Button
+    Friend WithEvents closeBtn As System.Windows.Forms.Button
 
 End Class

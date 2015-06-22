@@ -11,7 +11,7 @@
 
     End Sub
 
-    Private Sub MinimizeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MinimizeToolStripMenuItem.Click
+    Private Sub MinimizeToolStripMenuItem_Click(sender As Object, e As EventArgs)
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
@@ -287,5 +287,28 @@
 
             MainForm.InfoWindow()
 
+    End Sub
+
+
+    'License check
+    Private Sub LicenseToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LicenseToolStripMenuItem.Click
+
+        
+        Dim LF1 As New LicenseForm()
+        LF1.Show()
+
+
+    End Sub
+
+    Private Sub WindowFrameToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles WindowFrameToolStripMenuItem.Click
+        If MainForm.FormBorderStyle = Windows.Forms.FormBorderStyle.Fixed3D Then
+            MainForm.FormBorderStyle = Windows.Forms.FormBorderStyle.None
+            MainForm.closeBtn.Visible = True
+            MainForm.moveBtn.Visible = True
+        Else
+            MainForm.FormBorderStyle = Windows.Forms.FormBorderStyle.Fixed3D
+            MainForm.closeBtn.Visible = False
+            MainForm.moveBtn.Visible = False
+        End If
     End Sub
 End Class

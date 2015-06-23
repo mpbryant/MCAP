@@ -310,5 +310,15 @@
             MainForm.closeBtn.Visible = False
             MainForm.moveBtn.Visible = False
         End If
+
+        If MainForm.FormBorderStyle <> Windows.Forms.FormBorderStyle.None Then
+            MainForm.xoffset = 0
+            MainForm.yoffset = 0
+        Else
+            MainForm.xoffset = -10
+            MainForm.yoffset = -32
+        End If
+        MainForm.DimmerLocations()
+
     End Sub
 End Class

@@ -207,7 +207,7 @@ Partial Class MainForm
         Me.BKUPtx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BKUPtx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BKUPtx.ForeColor = System.Drawing.Color.Transparent
-        Me.BKUPtx.Location = New System.Drawing.Point(474, 312)
+        Me.BKUPtx.Location = New System.Drawing.Point(474, 313)
         Me.BKUPtx.Name = "BKUPtx"
         Me.BKUPtx.Size = New System.Drawing.Size(5, 5)
         Me.BKUPtx.TabIndex = 56
@@ -221,7 +221,7 @@ Partial Class MainForm
         Me.INT1tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.INT1tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.INT1tx.ForeColor = System.Drawing.Color.Transparent
-        Me.INT1tx.Location = New System.Drawing.Point(459, 292)
+        Me.INT1tx.Location = New System.Drawing.Point(459, 293)
         Me.INT1tx.Name = "INT1tx"
         Me.INT1tx.Size = New System.Drawing.Size(5, 5)
         Me.INT1tx.TabIndex = 57
@@ -263,7 +263,7 @@ Partial Class MainForm
         Me.ATC2tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.ATC2tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.ATC2tx.ForeColor = System.Drawing.Color.Transparent
-        Me.ATC2tx.Location = New System.Drawing.Point(473, 223)
+        Me.ATC2tx.Location = New System.Drawing.Point(472, 223)
         Me.ATC2tx.Name = "ATC2tx"
         Me.ATC2tx.Size = New System.Drawing.Size(5, 5)
         Me.ATC2tx.TabIndex = 60
@@ -361,7 +361,7 @@ Partial Class MainForm
         Me.MSR4tx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.MSR4tx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.MSR4tx.ForeColor = System.Drawing.Color.Transparent
-        Me.MSR4tx.Location = New System.Drawing.Point(575, 292)
+        Me.MSR4tx.Location = New System.Drawing.Point(575, 293)
         Me.MSR4tx.Name = "MSR4tx"
         Me.MSR4tx.Size = New System.Drawing.Size(5, 5)
         Me.MSR4tx.TabIndex = 67
@@ -375,7 +375,7 @@ Partial Class MainForm
         Me.CDLtx.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.CDLtx.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.CDLtx.ForeColor = System.Drawing.Color.Transparent
-        Me.CDLtx.Location = New System.Drawing.Point(561, 311)
+        Me.CDLtx.Location = New System.Drawing.Point(561, 312)
         Me.CDLtx.Name = "CDLtx"
         Me.CDLtx.Size = New System.Drawing.Size(5, 5)
         Me.CDLtx.TabIndex = 68

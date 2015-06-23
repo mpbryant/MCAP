@@ -156,7 +156,28 @@ Public Class MainForm
     Dim ld19 As New LightDimmer
     Dim ld20 As New LightDimmer
 
+    Dim ld21 As New LightDimmer
+    Dim ld22 As New LightDimmer
+    Dim ld23 As New LightDimmer
+    Dim ld24 As New LightDimmer
+    Dim ld25 As New LightDimmer
 
+    Dim ld31 As New LightDimmer
+    Dim ld32 As New LightDimmer
+    Dim ld33 As New LightDimmer
+    Dim ld34 As New LightDimmer
+    Dim ld35 As New LightDimmer
+    Dim ld36 As New LightDimmer
+    Dim ld37 As New LightDimmer
+    Dim ld38 As New LightDimmer
+    Dim ld39 As New LightDimmer
+    Dim ld40 As New LightDimmer
+    Dim ld41 As New LightDimmer
+    Dim ld42 As New LightDimmer
+    Dim ld43 As New LightDimmer
+
+    Public xoffset As Integer = 0
+    Public yoffset As Integer = 0
 
     Dim sideWidth As Integer = 8
     Dim topHeight As Integer = 24
@@ -3110,7 +3131,7 @@ Public Class MainForm
         InfoWindow()
 
         DimmerSetup()
-
+        SetAlphas()
 
 
 
@@ -5407,99 +5428,174 @@ Public Class MainForm
         DimmerForm.Show()
         DimmerForm.Owner = Me
         DimmerForm.Size = New Size(248, 51)
-        DimmerForm.Location = New Point(Me.Location.X + 386, Me.Location.Y + 52)
+
 
         ld1.Show()
         ld1.Owner = Me
         ld1.Size = New Size(5, 5)
-        ld1.Location = New Point(Me.Location.X + 307 + sideWidth, Me.Location.Y + 109 + topHeight)
+
 
         ld2.Show()
         ld2.Owner = Me
         ld2.Size = New Size(5, 5)
-        ld2.Location = New Point(Me.Location.X + 334 + sideWidth, Me.Location.Y + 109 + topHeight)
+
 
         ld3.Show()
         ld3.Owner = Me
         ld3.Size = New Size(5, 5)
-        ld3.Location = New Point(Me.Location.X + 379 + sideWidth, Me.Location.Y + 109 + topHeight)
+
 
         ld4.Show()
         ld4.Owner = Me
         ld4.Size = New Size(5, 5)
-        ld4.Location = New Point(Me.Location.X + 406 + sideWidth, Me.Location.Y + 109 + topHeight)
+
 
         ld5.Show()
         ld5.Owner = Me
         ld5.Size = New Size(5, 5)
-        ld5.Location = New Point(Me.Location.X + 599 + sideWidth, Me.Location.Y + 109 + topHeight)
+
 
         ld6.Show()
         ld6.Owner = Me
         ld6.Size = New Size(5, 5)
-        ld6.Location = New Point(Me.Location.X + 261 + sideWidth, Me.Location.Y + 109 + topHeight)
+
 
         ld7.Show()
         ld7.Owner = Me
         ld7.Size = New Size(5, 5)
-        ld7.Location = New Point(Me.Location.X + 234 + sideWidth, Me.Location.Y + 109 + topHeight)
+
 
         ld8.Show()
         ld8.Owner = Me
         ld8.Size = New Size(5, 5)
-        ld8.Location = New Point(Me.Location.X + 187 + sideWidth, Me.Location.Y + 109 + topHeight)
+
 
         ld9.Show()
         ld9.Owner = Me
         ld9.Size = New Size(5, 5)
-        ld9.Location = New Point(Me.Location.X + 160 + sideWidth, Me.Location.Y + 109 + topHeight)
+
 
         ld10.Show()
         ld10.Owner = Me
         ld10.Size = New Size(5, 5)
-        ld10.Location = New Point(Me.Location.X + 112 + sideWidth, Me.Location.Y + 109 + topHeight)
+
 
         ld11.Show()
         ld11.Owner = Me
         ld11.Size = New Size(5, 5)
-        ld11.Location = New Point(Me.Location.X + 85 + sideWidth, Me.Location.Y + 109 + topHeight)
+
         ld12.Show()
         ld12.Owner = Me
         ld12.Size = New Size(5, 5)
-        ld12.Location = New Point(Me.Location.X + 85 + sideWidth, Me.Location.Y + 40 + topHeight)
+
         ld13.Show()
         ld13.Owner = Me
         ld13.Size = New Size(5, 5)
-        ld13.Location = New Point(Me.Location.X + 112 + sideWidth, Me.Location.Y + 40 + topHeight)
+
         ld14.Show()
         ld14.Owner = Me
         ld14.Size = New Size(5, 5)
-        ld14.Location = New Point(Me.Location.X + 160 + sideWidth, Me.Location.Y + 40 + topHeight)
+
         ld15.Show()
         ld15.Owner = Me
         ld15.Size = New Size(5, 5)
-        ld15.Location = New Point(Me.Location.X + 187 + sideWidth, Me.Location.Y + 40 + topHeight)
+
         ld16.Show()
         ld16.Owner = Me
         ld16.Size = New Size(5, 5)
-        ld16.Location = New Point(Me.Location.X + 234 + sideWidth, Me.Location.Y + 40 + topHeight)
+
         ld17.Show()
         ld17.Owner = Me
         ld17.Size = New Size(5, 5)
-        ld17.Location = New Point(Me.Location.X + 261 + sideWidth, Me.Location.Y + 40 + topHeight)
+
         ld18.Show()
         ld18.Owner = Me
         ld18.Size = New Size(5, 5)
-        ld18.Location = New Point(Me.Location.X + 307 + sideWidth, Me.Location.Y + 40 + topHeight)
+
         ld19.Show()
         ld19.Owner = Me
         ld19.Size = New Size(5, 5)
-        ld19.Location = New Point(Me.Location.X + 334 + sideWidth, Me.Location.Y + 40 + topHeight)
+
         ld20.Show()
         ld20.Owner = Me
         ld20.Size = New Size(5, 5)
-        ld20.Location = New Point(Me.Location.X + 85 + sideWidth, Me.Location.Y + 179 + topHeight)
 
+
+        ld21.Show()
+        ld21.Owner = Me
+        ld21.Size = New Size(5, 5)
+
+        ld22.Show()
+        ld22.Owner = Me
+        ld22.Size = New Size(5, 5)
+
+        ld23.Show()
+        ld23.Owner = Me
+        ld23.Size = New Size(5, 5)
+
+        ld24.Show()
+        ld24.Owner = Me
+        ld24.Size = New Size(5, 5)
+
+        ld25.Show()
+        ld25.Owner = Me
+        ld25.Size = New Size(5, 5)
+
+
+        ld31.Show()
+        ld31.Owner = Me
+        ld31.Size = New Size(5, 5)
+
+        ld32.Show()
+        ld32.Owner = Me
+        ld32.Size = New Size(5, 5)
+
+        ld33.Show()
+        ld33.Owner = Me
+        ld33.Size = New Size(5, 5)
+
+        ld34.Show()
+        ld34.Owner = Me
+        ld34.Size = New Size(5, 5)
+
+        ld35.Show()
+        ld35.Owner = Me
+        ld35.Size = New Size(5, 5)
+
+        ld36.Show()
+        ld36.Owner = Me
+        ld36.Size = New Size(5, 5)
+
+        ld37.Show()
+        ld37.Owner = Me
+        ld37.Size = New Size(5, 5)
+
+        ld38.Show()
+        ld38.Owner = Me
+        ld38.Size = New Size(5, 5)
+
+        ld39.Show()
+        ld39.Owner = Me
+        ld39.Size = New Size(5, 5)
+
+        ld40.Show()
+        ld40.Owner = Me
+        ld40.Size = New Size(5, 5)
+
+        ld41.Show()
+        ld41.Owner = Me
+        ld41.Size = New Size(5, 5)
+
+        ld42.Show()
+        ld42.Owner = Me
+        ld42.Size = New Size(5, 5)
+
+        ld43.Show()
+        ld43.Owner = Me
+        ld43.Size = New Size(5, 5)
+
+
+        DimmerLocations()
 
 
 
@@ -5531,6 +5627,27 @@ Public Class MainForm
         ld18.Opacity = alpha
         ld19.Opacity = alpha
         ld20.Opacity = alpha
+
+        ld21.Opacity = alpha
+        ld22.Opacity = alpha
+        ld23.Opacity = alpha
+        ld24.Opacity = alpha
+        ld25.Opacity = alpha
+
+        ld31.Opacity = alpha
+        ld32.Opacity = alpha
+        ld33.Opacity = alpha
+        ld34.Opacity = alpha
+        ld35.Opacity = alpha
+        ld36.Opacity = alpha
+        ld37.Opacity = alpha
+        ld38.Opacity = alpha
+        ld39.Opacity = alpha
+        ld40.Opacity = alpha
+        ld41.Opacity = alpha
+        ld42.Opacity = alpha
+        ld43.Opacity = alpha
+
     End Sub
 
 
@@ -5538,4 +5655,64 @@ Public Class MainForm
     Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
     End Sub
+
+    Public Sub DimmerLocations()
+        DimmerForm.Location = New Point(Me.Location.X + xoffset + 386, Me.Location.Y + yoffset + 52)
+        ld1.Location = New Point(Me.Location.X + 307 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld2.Location = New Point(Me.Location.X + 334 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld3.Location = New Point(Me.Location.X + 379 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld4.Location = New Point(Me.Location.X + 406 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld5.Location = New Point(Me.Location.X + 599 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld6.Location = New Point(Me.Location.X + 261 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld7.Location = New Point(Me.Location.X + 234 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld8.Location = New Point(Me.Location.X + 187 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld9.Location = New Point(Me.Location.X + 160 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld10.Location = New Point(Me.Location.X + 112 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld11.Location = New Point(Me.Location.X + 85 + xoffset + sideWidth, Me.Location.Y + yoffset + 109 + topHeight)
+        ld12.Location = New Point(Me.Location.X + 85 + xoffset + sideWidth, Me.Location.Y + yoffset + 40 + topHeight)
+        ld13.Location = New Point(Me.Location.X + 112 + xoffset + sideWidth, Me.Location.Y + yoffset + 40 + topHeight)
+        ld14.Location = New Point(Me.Location.X + 160 + xoffset + sideWidth, Me.Location.Y + yoffset + 40 + topHeight)
+        ld15.Location = New Point(Me.Location.X + 187 + xoffset + sideWidth, Me.Location.Y + yoffset + 40 + topHeight)
+        ld16.Location = New Point(Me.Location.X + 234 + xoffset + sideWidth, Me.Location.Y + yoffset + 40 + topHeight)
+        ld17.Location = New Point(Me.Location.X + 261 + xoffset + sideWidth, Me.Location.Y + yoffset + 40 + topHeight)
+        ld18.Location = New Point(Me.Location.X + 307 + xoffset + sideWidth, Me.Location.Y + yoffset + 40 + topHeight)
+        ld19.Location = New Point(Me.Location.X + 334 + xoffset + sideWidth, Me.Location.Y + yoffset + 40 + topHeight)
+        ld20.Location = New Point(Me.Location.X + 85 + xoffset + sideWidth, Me.Location.Y + yoffset + 179 + topHeight)
+        ld21.Location = New Point(Me.Location.X + 160 + xoffset + sideWidth, Me.Location.Y + yoffset + 179 + topHeight)
+        ld22.Location = New Point(Me.Location.X + 234 + xoffset + sideWidth, Me.Location.Y + yoffset + 179 + topHeight)
+        ld23.Location = New Point(Me.Location.X + 85 + xoffset + sideWidth, Me.Location.Y + yoffset + 248 + topHeight)
+        ld24.Location = New Point(Me.Location.X + 160 + xoffset + sideWidth, Me.Location.Y + yoffset + 248 + topHeight)
+        ld25.Location = New Point(Me.Location.X + 234 + xoffset + sideWidth, Me.Location.Y + yoffset + 248 + topHeight)
+        ld31.Location = New Point(Me.Location.X + 474 + xoffset + sideWidth, Me.Location.Y + yoffset + 313 + topHeight)
+        ld32.Location = New Point(Me.Location.X + 459 + xoffset + sideWidth, Me.Location.Y + yoffset + 293 + topHeight)
+        ld33.Location = New Point(Me.Location.X + 454 + xoffset + sideWidth, Me.Location.Y + yoffset + 268 + topHeight)
+        ld34.Location = New Point(Me.Location.X + 459 + xoffset + sideWidth, Me.Location.Y + yoffset + 243 + topHeight)
+        ld35.Location = New Point(Me.Location.X + 472 + xoffset + sideWidth, Me.Location.Y + yoffset + 223 + topHeight)
+        ld36.Location = New Point(Me.Location.X + 492 + xoffset + sideWidth, Me.Location.Y + yoffset + 210 + topHeight)
+        ld37.Location = New Point(Me.Location.X + 517 + xoffset + sideWidth, Me.Location.Y + yoffset + 204 + topHeight)
+        ld38.Location = New Point(Me.Location.X + 541 + xoffset + sideWidth, Me.Location.Y + yoffset + 209 + topHeight)
+        ld39.Location = New Point(Me.Location.X + 562 + xoffset + sideWidth, Me.Location.Y + yoffset + 223 + topHeight)
+        ld40.Location = New Point(Me.Location.X + 575 + xoffset + sideWidth, Me.Location.Y + yoffset + 244 + topHeight)
+        ld41.Location = New Point(Me.Location.X + 580 + xoffset + sideWidth, Me.Location.Y + yoffset + 268 + topHeight)
+        ld42.Location = New Point(Me.Location.X + 575 + xoffset + sideWidth, Me.Location.Y + yoffset + 293 + topHeight)
+        ld43.Location = New Point(Me.Location.X + 561 + xoffset + sideWidth, Me.Location.Y + yoffset + 312 + topHeight)
+    End Sub
+
+    Private Sub MainForm_Move(sender As Object, e As EventArgs) Handles MyBase.Move
+
+    End Sub
+
+    Private Sub MainForm_LocationChanged(sender As Object, e As EventArgs) Handles MyBase.LocationChanged
+        If Me.FormBorderStyle <> Windows.Forms.FormBorderStyle.None Then
+            xoffset = 0
+            yoffset = 0
+        Else
+            xoffset = -10
+            yoffset = -32
+        End If
+        DimmerLocations()
+    End Sub
+
+    
+
 End Class
